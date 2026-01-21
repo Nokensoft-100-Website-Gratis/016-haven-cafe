@@ -1,0 +1,75 @@
+
+Garis Besar:
+Website tipe one page modern dan responsive bisa buka di segala perangkat desktop, tablet, mobile lengkap dengan tag SEO.
+
+==============
+Tentang Organisasi
+- Nama Organisasi: "Haven Cafe"
+- Keterangan: sebuah cafe shop di Sentani, Kab Jayapura, Papua.
+- Alaamat: ex-Bosco Fernandez, Jl. Gereja Silo, Hinekombe, Kec. Sentani, Kabupaten Jayapura, Papua 99352
+- Instagram: https://www.instagram.com/qwerty.cake20/
+- No Telp/WA: 082311005950
+=============
+
+
+Spesifikasi
+- Bahasa: Indonesia
+- HTML, CSS Tailwind, Alpine.js, Font Awesome Icon
+- Image placeholder landscape: https://placehold.co/600x400
+- Image placeholder square: https://placehold.co/400
+- gambar slider: https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=800
+- Warna Utama: hijau elegan, hitam dan putih
+- gambar produk menu cafe random dari https://images.unsplash.com/
+
+Struktur konten
+- nav
+- header
+- section (kategori menu cafe, produk roastery, galeri, testimoni, kontak)
+- footer
+
+Navigasi
+- Beranda
+- Menu Cafe 
+- Produk Roastery
+- Galeri
+- Testimoni
+- Kontak (gunakan style button rounded-pill dan icon font awesome)
+
+gaya desain Navigasi
+- posisi between dengan urutan logo, judul, menu/navigasi
+- pastikan style active untuk nav ketika menampilkan setiap section dan default di beranda
+
+
+Mobile friendly
+- utamakan tampilan mobile
+- menu navigasi utama muncul di bawah
+
+Gaya Desain & interaksi
+- gaya blur gradation
+- Setiap section memiliki judul dan sub judul (2 kalimat singkat)
+- tampilan mobile memiliki tombol navigasi mobile
+- Logo gunakan icon font awesome "shop" yang sesuai dengan produk di samping judul ada link ke "./"
+- setiap box hover shadow transision
+- setip navigasi scroll transition 
+- setiap kategori memiliki icon
+- testimoni terdiri dari icon user, teks testimoni, nama lengkap di Bawah
+- setiap box kategori bisa klik untuk filter produk berdasarkan kategori
+- di bagian produk ada tombol/badge kategori. kategori aktif adalah produk popular. buat 6 contoh produk dan pastikan navigasi kategori berfungsi dengan baik
+
+Header
+- Terdiri dari judul, sub judul terdiri dari 2 kalimat penjelasan umum dan singkat, 2 tombol action sub judul yang satu filled dan satunya outline disertai dengan icon, dan 1 gambar ilustrasi
+- 2 kolom
+
+Footer
+- terdiri dari 2 kolom
+- kolom kiri: alamat, no telp/wa, icon media social
+- kanan: google map peta papua 
+
+Widget
+- tambah tombol bulat instagram & wa di ujung kanan Bawah untuk menirim pesan singkat ke nomor pemilik 
+
+Informasi author
+- Powered by Nokensoft, www.nokensoft.com tambahkan di link footer dan buatkan komentar html untuk lisensi/copyright di bagian <head>
+
+
+

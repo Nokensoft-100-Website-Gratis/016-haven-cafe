@@ -1,0 +1,83 @@
+[
+    {
+        "id": 4,
+        "kategori": "popular",
+        "judul": "Sentani Cold Brew",
+        "keterangan": "Steeped for 12 hours to produce a smooth, refreshing, and low-acidity coffee.",
+        "harga": 30000,
+        "gambar": "images/haven-non-coffee-1.png",
+        "status": true
+    },
+    {
+        "id": 1,
+        "kategori": "popular",
+        "judul": "Haven Signature Latte",
+        "keterangan": "A premium espresso blend with creamy milk and a touch of authentic Papua flavor.",
+        "harga": 35000,
+        "gambar": "images/coffee-and-leaf.avif",
+        "status": true
+    },
+    {
+        "id": 2,
+        "kategori": "popular",
+        "judul": "Classic Cappuccino",
+        "keterangan": "A perfect balance of rich espresso, velvety steamed milk, and a thick layer of foam.",
+        "harga": 28000,
+        "gambar": "images/cup-of-coffee.avif",
+        "status": true
+    },
+    {
+        "id": 12,
+        "kategori": "coffee",
+        "judul": "Classic Cappuccino",
+        "keterangan": "A perfect balance of rich espresso, velvety steamed milk, and a thick layer of foam.",
+        "harga": 28000,
+        "gambar": "images/cup-of-coffee.avif",
+        "status": true
+    },
+    {
+        "id": 3,
+        "kategori": "coffee",
+        "judul": "Two Guns Espresso",
+        "keterangan": "Pure double shot espresso for those who crave a bold and intense coffee experience.",
+        "harga": 22000,
+        "gambar": "images/two-guns-espresso.avif",
+        "status": true
+    },
+    {
+        "id": 5,
+        "kategori": "food",
+        "judul": "Signature Haven Burger",
+        "keterangan": "Premium beef patty with fresh greens and Haven Cafe's secret signature sauce.",
+        "harga": 45000,
+        "gambar": "images/food.png",
+        "status": true
+    },
+    {
+        "id": 6,
+        "kategori": "food",
+        "judul": "Creamy Mushroom Pasta",
+        "keterangan": "Warm fettuccine tossed in a rich and savory creamy mushroom sauce.",
+        "harga": 38000,
+        "gambar": "images/food.png",
+        "status": false
+    },
+    {
+        "id": 7,
+        "kategori": "popular",
+        "judul": "Tropical Iced Tea",
+        "keterangan": "Refreshing brewed tea infused with fresh tropical fruit slices.",
+        "harga": 25000,
+        "gambar": "images/drink.png",
+        "status": true
+    },
+    {
+        "id": 8,
+        "kategori": "coffee",
+        "judul": "Flat White",
+        "keterangan": "Silky micro-foam poured over a double shot of espresso for a smooth texture.",
+        "harga": 28000,
+        "gambar": "images/coffee-and-leaf.avif",
+        "status": true
+    }
+]

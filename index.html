@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth" x-data="{ 
+    darkMode: localStorage.getItem('theme') === 'dark',
+    activeTab: 'popular',
+    currentSection: 'home'
+}" :class="{ 'dark': darkMode }">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haven Cafe | Coffee & Roastery Sentani Papua</title>
+    <meta name="description"
+        content="Haven Cafe - Best Coffee Shop & Roastery in Sentani, Jayapura. Enjoy a cozy atmosphere with premium quality coffee.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1a4d2e',
+                        dark: '#111827',
+                        darkLighter: '#1f2937'
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        .blur-gradient {
+            background: radial-gradient(circle at 50% 50%, rgba(26, 77, 46, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+        }
+
+        .dark .blur-gradient {
+            background: radial-gradient(circle at 50% 50%, rgba(26, 77, 46, 0.15) 0%, rgba(17, 24, 39, 0) 100%);
+        }
+
+        .nav-active {
+            color: #1a4d2e !important;
+            border-bottom: 2px solid #1a4d2e;
+        }
+
+        [x-cloak] {
+            display: none !important;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-20px) rotate(5deg);
+            }
+
+            100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+        }
+
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .animate-float-delayed {
+            animation: float 8s ease-in-out infinite;
+            animation-delay: 2s;
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        .animate-marquee {
+            animation: marquee 40s linear infinite;
+        }
+
+        /* Optional: Pause on hover */
+        .group:hover .animate-marquee {
+            animation-play-state: paused;
+        }
+    </style>
+</head>
+
+<body class="bg-white dark:bg-dark text-dark dark:text-gray-100 transition-colors duration-300 font-sans">
+
+    <nav class="fixed top-0 w-full bg-white/95 dark:bg-dark/95 border-b border-gray-200 dark:border-gray-800 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="./" class="flex items-center gap-2 text-primary font-bold text-xl uppercase tracking-tighter">
+                <i class="fa-solid fa-shop"></i>
+                <span>Haven Cafe</span>
+            </a>
+
+            <div class="flex items-center gap-4 md:gap-10">
+                <div class="hidden md:flex gap-8 font-semibold text-sm uppercase tracking-widest">
+                    <a href="#home" :class="currentSection === 'home' ? 'nav-active' : ''"
+                        @click="currentSection = 'home'" class="hover:text-primary transition py-1">Home</a>
+                    <a href="#menu" :class="currentSection === 'menu' ? 'nav-active' : ''"
+                        @click="currentSection = 'menu'" class="hover:text-primary transition py-1">Our Menu</a>
+                    <a href="#reservation" :class="currentSection === 'reservation' ? 'nav-active' : ''"
+                        @click="currentSection = 'reservation'"
+                        class="hover:text-primary transition py-1">Reservation</a>
+                </div>
+
+                <div class="flex items-center gap-3 md:gap-4">
+                    <button @click="darkMode = !darkMode; localStorage.setItem('theme', darkMode ? 'dark' : 'light')"
+                        class="w-10 h-10 border border-gray-200 dark:border-gray-700 text-primary flex items-center justify-center transition hover:bg-gray-50 dark:hover:bg-gray-800">
+                        <i class="fa-solid" :class="darkMode ? 'fa-sun' : 'fa-moon'"></i>
+                    </button>
+
+                    <a href="#contact"
+                        class="hidden sm:block bg-primary text-white px-6 py-2 font-bold uppercase text-xs tracking-widest hover:bg-black dark:hover:bg-white dark:hover:text-dark transition">
+                        Contact Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header id="home" class="relative pt-32 pb-20 px-6 blur-gradient min-h-screen flex items-center overflow-hidden">
+        <div
+            class="absolute top-1/4 left-4 md:left-20 z-30 opacity-20 dark:opacity-40 animate-float pointer-events-none">
+            <svg width="80" height="80" viewBox="0 0 512 512" fill="currentColor" class="text-primary drop-shadow-2xl">
+                <path
+                    d="M411.1 71.1C375.3 35.2 324.2 18.7 271.4 25.1c-53.7 6.5-102.5 35.1-134.1 78.7-33.6 46.4-45.2 103.5-31.9 157.1l3.2 12.8 12.8 3.2c53.6 13.3 110.7 1.7 157.1-31.9 43.6-31.6 72.2-80.4 78.7-134.1 6.3-52.7-10.2-103.8-46.1-139.7zm-95.2 184.2c-42.3 30.6-94.2 41.2-143.1 29.1 12.1-48.9 22.7-100.8 53.3-143.1 28.7-39.6 73-65.5 121.7-71.4-4.2 41.7-18.4 82.6-46.1 118.7-27.7 36.1-61.9 66.7-100.8 91.7l115-115c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6l-115 115c25 38.9 55.6 73.1 91.7 100.8 36.1 27.7 77 41.9 118.7 46.1-5.9-48.7-31.8-93-71.4-121.7l-46.6 46.7z" />
+            </svg>
+        </div>
+
+        <div
+            class="container mx-auto grid md:grid-cols-2 gap-0 items-stretch border border-gray-100 dark:border-gray-800 bg-white dark:bg-darkLighter shadow-2xl relative z-10">
+            <div class="p-10 md:p-20 flex flex-col justify-center bg-white dark:bg-darkLighter relative z-10">
+                <h1 class="text-5xl md:text-7xl font-black leading-none mb-6 uppercase tracking-tighter">
+                    Haven Cafe<br><span class="text-primary italic">Sentani.</span>
+                </h1>
+                <p class="text-lg text-gray-600 dark:text-gray-400 mb-10 border-l-4 border-primary pl-4">
+                    Experience the finest Papua highland coffee in the heart of Sentani. Authentic flavors blended with
+                    a modern atmosphere.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#menu"
+                        class="bg-primary text-white px-8 py-4 font-bold uppercase text-sm tracking-widest text-center hover:bg-black transition flex items-center justify-center gap-3">
+                        <i class="fa-solid fa-utensils"></i>
+                        Explore Menu
+                    </a>
+                    <a href="https://wa.me/6282311005950"
+                        class="border border-dark dark:border-white text-dark dark:text-white px-8 py-4 font-bold uppercase text-sm tracking-widest text-center hover:bg-gray-100 dark:hover:bg-white dark:hover:text-dark transition flex items-center justify-center gap-3">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        Book a Table
+                    </a>
+                </div>
+            </div>
+
+            <div x-data="{ 
+                activeSlide: 0, 
+                slides: ['images/coffee-and-flawer.jpg', './images/haven-cafe-3.png','./images/haven-cafe-1.png', 'images/haven-cafe-2.png'],
+                autoPlay() { setInterval(() => { this.activeSlide = (this.activeSlide + 1) % this.slides.length }, 5000) }
+            }" x-init="autoPlay()" class="relative min-h-[400px] overflow-hidden">
+                <div class="absolute inset-0 w-full h-full">
+                    <template x-for="(slide, index) in slides" :key="index">
+                        <div x-show="activeSlide === index" x-transition:enter="transition ease-out duration-1000"
+                            x-transition:enter-start="opacity-0 scale-105"
+                            x-transition:enter-end="opacity-100 scale-100"
+                            x-transition:leave="transition ease-in duration-1000" x-transition:leave-end="opacity-0"
+                            class="absolute inset-0">
+                            <img :src="slide" class="w-full h-full object-cover">
+                        </div>
+                    </template>
+                </div>
+                <div class="absolute inset-0 bg-primary/10 pointer-events-none z-10"></div>
+                <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-3 z-20">
+                    <template x-for="(slide, index) in slides" :key="index">
+                        <button @click="activeSlide = index"
+                            :class="activeSlide === index ? 'bg-primary w-10' : 'bg-white/50 hover:bg-white w-2'"
+                            class="h-2 rounded-full transition-all duration-300 shadow-sm"></button>
+                    </template>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="menu" x-data="{ 
+            activeTab: 'popular', 
+            menus: [],
+            init() {
+                fetch('data/menu.json')
+                    .then(res => res.json())
+                    .then(data => this.menus = data)
+            }
+        }" class="py-24 bg-gray-50 dark:bg-dark">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+                <div>
+                    <h2 class="text-4xl font-black uppercase tracking-tighter mb-2">Signature Menu</h2>
+                    <p class="text-gray-500">Discover our curated selection of beverages and treats.</p>
+                </div>
+
+                <div class="flex flex-wrap gap-2">
+                    <template x-for="tab in ['popular', 'coffee', 'food']">
+                        <button @click="activeTab = tab"
+                            :class="activeTab === tab ? 'bg-primary text-white' : 'bg-white dark:bg-darkLighter text-gray-600 dark:text-gray-400'"
+                            class="px-6 py-3 font-bold text-xs uppercase tracking-widest border border-gray-200 dark:border-gray-700 transition"
+                            x-text="tab.charAt(0).toUpperCase() + tab.slice(1)">
+                        </button>
+                    </template>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+                <template x-for="item in menus" :key="item.id">
+                    <div x-show="activeTab === 'popular' ? item.kategori === 'popular' : item.kategori === activeTab"
+                        x-transition:enter="transition ease-out duration-300"
+                        x-transition:enter-start="opacity-0 transform translate-y-4"
+                        x-transition:enter-end="opacity-100 transform translate-y-0"
+                        class="bg-white dark:bg-darkLighter border border-gray-200 dark:border-gray-800 group h-full flex flex-col relative"
+                        :class="!item.status ? 'opacity-75 grayscale-[0.5]' : ''">
+
+                        <div class="aspect-square overflow-hidden bg-gray-200 relative">
+                            <img :src="item.gambar"
+                                class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                            <div class="absolute top-0 left-0 text-white px-3 py-1 text-[10px] font-bold uppercase tracking-widest shadow-md"
+                                :class="item.status ? 'bg-primary' : 'bg-red-600'">
+                                <span x-text="item.status ? 'Barista Pick' : 'Sold Out'"></span>
+                            </div>
+                        </div>
+
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-lg font-black uppercase mb-2" x-text="item.judul"></h3>
+                            <p class="text-gray-500 text-xs mb-6 line-clamp-2" x-text="item.keterangan"></p>
+
+                            <div
+                                class="mt-auto flex justify-between items-center border-t border-gray-100 dark:border-gray-700 pt-5">
+                                <span class="text-md font-bold text-dark dark:text-white"
+                                    x-text="'Rp ' + item.harga.toLocaleString('id-ID')"></span>
+
+                                <template x-if="item.status">
+                                    <div class="flex items-center gap-3">
+                                        <span
+                                            class="text-primary font-black uppercase text-[10px] tracking-widest">Ready</span>
+                                        <a :href="'https://wa.me/6282311005950?text=Hi Haven Cafe, I would like to order ' + item.judul"
+                                            target="_blank"
+                                            class="w-10 h-10 rounded-full border border-primary text-primary flex items-center justify-center hover:bg-primary hover:text-white transition duration-300">
+
+                                            <template x-if="item.kategori === 'coffee' || item.kategori === 'popular'">
+                                                <i class="fa-solid fa-mug-hot text-sm"></i>
+                                            </template>
+
+                                            <template x-if="item.kategori === 'food'">
+                                                <i class="fa-solid fa-utensils text-sm"></i>
+                                            </template>
+                                        </a>
+                                    </div>
+                                </template>
+
+                                <template x-if="!item.status">
+                                    <div class="flex items-center gap-3">
+                                        <span
+                                            class="text-gray-400 font-black uppercase text-[10px] tracking-widest">Sold
+                                            Out</span>
+                                        <div
+                                            class="w-10 h-10 rounded-full border border-gray-300 text-gray-400 flex items-center justify-center cursor-not-allowed">
+                                            <i class="fa-solid fa-ban text-sm"></i>
+                                        </div>
+                                    </div>
+                                </template>
+                            </div>
+                        </div>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="events" class="py-24 bg-gray-50 dark:bg-dark">
+        <div class="container mx-auto px-6">
+            <div class="max-w-3xl mb-16">
+                <h4 class="text-primary font-bold uppercase text-xs tracking-[0.3em] mb-3">Garden Venue</h4>
+                <h2 class="text-5xl md:text-6xl font-black uppercase tracking-tighter leading-none mb-6">
+                    Celebrate in Our <br><span class="text-primary italic">Secret Garden.</span>
+                </h2>
+                <p class="text-gray-600 dark:text-gray-400 text-lg border-l-4 border-primary pl-6">
+                    From intimate weddings to grand birthday bashes, our lush garden courtyard provides a serene and
+                    unforgettable atmosphere in the heart of Sentani.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <div
+                    class="group bg-white dark:bg-darkLighter border border-gray-200 dark:border-gray-800 p-8 transition-all duration-500 hover:border-primary relative overflow-hidden">
+                    <div class="relative z-10">
+                        <i class="fa-solid fa-ring text-3xl text-primary mb-6 block"></i>
+                        <h3 class="text-2xl font-black uppercase mb-4 tracking-tight">Mini Wedding</h3>
+                        <p class="text-gray-500 dark:text-gray-400 text-sm mb-6">Host an elegant and intimate garden
+                            wedding. Perfect for up to 50 guests with natural floral aesthetics.</p>
+                        <ul class="text-[11px] uppercase tracking-widest font-bold text-gray-400 space-y-2 mb-8">
+                            <li><i class="fa-solid fa-check text-primary mr-2"></i> Buffet Catering</li>
+                            <li><i class="fa-solid fa-check text-primary mr-2"></i> Standard Sound System</li>
+                            <li><i class="fa-solid fa-check text-primary mr-2"></i> Private Garden Access</li>
+                        </ul>
+                    </div>
+                    <div class="absolute -bottom-4 -right-4 opacity-5 group-hover:opacity-10 transition-opacity">
+                        <i class="fa-solid fa-ring text-9xl"></i>
+                    </div>
+                </div>
+
+                <div
+                    class="group bg-white dark:bg-darkLighter border border-gray-200 dark:border-gray-800 p-8 transition-all duration-500 hover:border-primary relative overflow-hidden">
+                    <div class="relative z-10">
+                        <i class="fa-solid fa-cake-candles text-3xl text-primary mb-6 block"></i>
+                        <h3 class="text-2xl font-black uppercase mb-4 tracking-tight">Birthday Bash</h3>
+                        <p class="text-gray-500 dark:text-gray-400 text-sm mb-6">Celebrate your special day in a relaxed
+                            outdoor setting. Custom menus available for all ages.</p>
+                        <ul class="text-[11px] uppercase tracking-widest font-bold text-gray-400 space-y-2 mb-8">
+                            <li><i class="fa-solid fa-check text-primary mr-2"></i> Dessert Table Setup</li>
+                            <li><i class="fa-solid fa-check text-primary mr-2"></i> Welcome Mocktails</li>
+                            <li><i class="fa-solid fa-check text-primary mr-2"></i> Birthday Decor Space</li>
+                        </ul>
+                    </div>
+                    <div class="absolute -bottom-4 -right-4 opacity-5 group-hover:opacity-10 transition-opacity">
+                        <i class="fa-solid fa-cake-candles text-9xl"></i>
+                    </div>
+                </div>
+
+                <div
+                    class="group bg-white dark:bg-darkLighter border border-gray-200 dark:border-gray-800 p-8 transition-all duration-500 hover:border-primary relative overflow-hidden">
+                    <div class="relative z-10">
+                        <i class="fa-solid fa-users-line text-3xl text-primary mb-6 block"></i>
+                        <h3 class="text-2xl font-black uppercase mb-4 tracking-tight">Social Gathering</h3>
+                        <p class="text-gray-500 dark:text-gray-400 text-sm mb-6">The perfect spot for family reunions or
+                            community meetups. Our garden makes every conversation warmer.</p>
+                        <ul class="text-[11px] uppercase tracking-widest font-bold text-gray-400 space-y-2 mb-8">
+                            <li><i class="fa-solid fa-check text-primary mr-2"></i> Snack Platters</li>
+                            <li><i class="fa-solid fa-check text-primary mr-2"></i> Free Flow Premium Tea</li>
+                            <li><i class="fa-solid fa-check text-primary mr-2"></i> Reserved Outdoor Lounge</li>
+                        </ul>
+                    </div>
+                    <div class="absolute -bottom-4 -right-4 opacity-5 group-hover:opacity-10 transition-opacity">
+                        <i class="fa-solid fa-users-line text-9xl"></i>
+                    </div>
+                </div>
+
+                <div
+                    class="group bg-white dark:bg-darkLighter border border-gray-200 dark:border-gray-800 p-8 transition-all duration-500 hover:border-primary relative overflow-hidden">
+                    <div class="relative z-10">
+                        <i class="fa-solid fa-wine-glass text-3xl text-primary mb-6 block"></i>
+                        <h3 class="text-2xl font-black uppercase mb-4 tracking-tight">Intimate Dinner</h3>
+                        <p class="text-gray-500 dark:text-gray-400 text-sm mb-6">A romantic dinner or anniversary
+                            celebration under the twinkling garden lights.</p>
+                        <ul class="text-[11px] uppercase tracking-widest font-bold text-gray-400 space-y-2 mb-8">
+                            <li><i class="fa-solid fa-check text-primary mr-2"></i> 4-Course Signature Meal</li>
+                            <li><i class="fa-solid fa-check text-primary mr-2"></i> Romantic Table Decor</li>
+                            <li><i class="fa-solid fa-check text-primary mr-2"></i> Personalized Place Cards</li>
+                        </ul>
+                    </div>
+                    <div class="absolute -bottom-4 -right-4 opacity-5 group-hover:opacity-10 transition-opacity">
+                        <i class="fa-solid fa-wine-glass text-9xl"></i>
+                    </div>
+                </div>
+
+                <div
+                    class="group bg-white dark:bg-darkLighter border border-gray-200 dark:border-gray-800 p-8 transition-all duration-500 hover:border-primary relative overflow-hidden">
+                    <div class="relative z-10">
+                        <i class="fa-solid fa-briefcase text-3xl text-primary mb-6 block"></i>
+                        <h3 class="text-2xl font-black uppercase mb-4 tracking-tight">Garden Meeting</h3>
+                        <p class="text-gray-500 dark:text-gray-400 text-sm mb-6">Escape the office. Boost your team's
+                            creativity with a meeting in the fresh outdoor air.</p>
+                        <ul class="text-[11px] uppercase tracking-widest font-bold text-gray-400 space-y-2 mb-8">
+                            <li><i class="fa-solid fa-check text-primary mr-2"></i> Projector & Screen</li>
+                            <li><i class="fa-solid fa-check text-primary mr-2"></i> Coffee Break Package</li>
+                            <li><i class="fa-solid fa-check text-primary mr-2"></i> High-Speed Wi-Fi</li>
+                        </ul>
+                    </div>
+                    <div class="absolute -bottom-4 -right-4 opacity-5 group-hover:opacity-10 transition-opacity">
+                        <i class="fa-solid fa-briefcase text-9xl"></i>
+                    </div>
+                </div>
+
+                <div
+                    class="group bg-white dark:bg-darkLighter border border-gray-200 dark:border-gray-800 p-8 transition-all duration-500 hover:border-primary relative overflow-hidden">
+                    <div class="relative z-10">
+                        <i class="fa-solid fa-graduation-cap text-3xl text-primary mb-6 block"></i>
+                        <h3 class="text-2xl font-black uppercase mb-4 tracking-tight">Graduation Party</h3>
+                        <p class="text-gray-500 dark:text-gray-400 text-sm mb-6">Celebrate your academic milestone with
+                            friends. Includes photo spots and catering packages.</p>
+                        <ul class="text-[11px] uppercase tracking-widest font-bold text-gray-400 space-y-2 mb-8">
+                            <li><i class="fa-solid fa-check text-primary mr-2"></i> Photo Backdrop</li>
+                            <li><i class="fa-solid fa-check text-primary mr-2"></i> Party Appetizers</li>
+                            <li><i class="fa-solid fa-check text-primary mr-2"></i> Special Group Discount</li>
+                        </ul>
+                    </div>
+                    <div class="absolute -bottom-4 -right-4 opacity-5 group-hover:opacity-10 transition-opacity">
+                        <i class="fa-solid fa-graduation-cap text-9xl"></i>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="mt-16 text-center">
+                <a href="https://wa.me/6282311005950?text=Hi Haven Cafe, I'm interested in your Garden Event Packages."
+                    target="_blank"
+                    class="inline-flex items-center gap-4 bg-dark dark:bg-primary text-white px-12 py-5 font-black uppercase text-xs tracking-[0.2em] hover:bg-primary dark:hover:bg-white dark:hover:text-dark transition duration-500">
+                    Contact Our Event Planner
+                    <i class="fa-solid fa-calendar-check"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="reservation" class="py-24 bg-white dark:bg-darkLighter overflow-hidden">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+                <div class="space-y-8">
+                    <div>
+                        <h4 class="text-primary font-bold uppercase text-xs tracking-[0.3em] mb-3">Book A Table</h4>
+                        <h2 class="text-5xl md:text-6xl font-black uppercase tracking-tighter leading-none">
+                            Secure Your <br><span class="text-primary italic">Haven Experience.</span>
+                        </h2>
+                    </div>
+
+                    <p class="text-gray-600 dark:text-gray-400 text-lg leading-relaxed max-w-xl">
+                        Whether it's a morning meeting, a romantic evening, or a gathering with friends, we'll make sure
+                        your spot is ready. For groups larger than 10, please contact us directly via phone.
+                    </p>
+
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-12 h-12 bg-gray-50 dark:bg-dark border border-gray-100 dark:border-gray-700 flex items-center justify-center text-primary text-xl">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-bold uppercase text-sm">Opening Hours</h5>
+                                <p class="text-gray-500 text-sm">Mon - Sat: 09:00 AM - 10:00 PM</p>
+                                <p class="text-gray-500 text-sm">Sun: 12:00 PM - 11:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative" x-data="{ 
+                    name: '', 
+                    date: '', 
+                    guests: '2 Persons',
+                    sendWa() {
+                        const message = `Hi Haven Cafe, I would like to make a reservation:%0A%0A- Name: ${this.name}%0A- Date/Time: ${this.date}%0A- Guests: ${this.guests}`;
+                        window.open(`https://wa.me/6282311005950?text=${message}`, '_blank');
+                    }
+                }">
+                    <div class="absolute -top-10 -right-10 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
+
+                    <div
+                        class="bg-white dark:bg-dark border border-gray-200 dark:border-gray-800 p-8 md:p-12 shadow-2xl relative z-10">
+                        <div class="grid grid-cols-1 gap-6">
+                            <div class="space-y-2">
+                                <label class="text-[10px] font-bold uppercase tracking-widest text-gray-400">Your Full
+                                    Name</label>
+                                <input type="text" x-model="name" placeholder="Enter your name"
+                                    class="w-full bg-gray-50 dark:bg-darkLighter border border-gray-100 dark:border-gray-700 px-4 py-4 focus:outline-none focus:border-primary transition text-sm">
+                            </div>
+
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div class="space-y-2">
+                                    <label class="text-[10px] font-bold uppercase tracking-widest text-gray-400">Date &
+                                        Time</label>
+                                    <input type="datetime-local" x-model="date"
+                                        class="w-full bg-gray-50 dark:bg-darkLighter border border-gray-100 dark:border-gray-700 px-4 py-4 focus:outline-none focus:border-primary transition text-sm">
+                                </div>
+                                <div class="space-y-2">
+                                    <label class="text-[10px] font-bold uppercase tracking-widest text-gray-400">Total
+                                        Guests</label>
+                                    <select x-model="guests"
+                                        class="w-full bg-gray-50 dark:bg-darkLighter border border-gray-100 dark:border-gray-700 px-4 py-4 focus:outline-none focus:border-primary transition text-sm">
+                                        <option>1 Person</option>
+                                        <option>2 Persons</option>
+                                        <option>4 Persons</option>
+                                        <option>6+ Persons</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <button @click="sendWa()"
+                                class="w-full bg-primary text-white py-5 font-black uppercase text-xs tracking-[0.2em] hover:bg-black transition duration-500 mt-4 flex items-center justify-center gap-3">
+                                Confirm Reservation
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+
+                        <p class="text-center text-[10px] text-gray-400 mt-6 uppercase tracking-widest">
+                            Instant confirmation via WhatsApp
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" x-data="{ open: false, activeImg: '' }"
+        class="py-24 bg-[#1a2e1a] dark:bg-[#0f1a0f] overflow-hidden">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+                <div class="max-w-xl">
+                    <h4 class="text-primary font-bold uppercase text-xs tracking-[0.3em] mb-3">Visual Journey</h4>
+                    <h2 class="text-5xl md:text-6xl font-black uppercase tracking-tighter leading-none text-white">
+                        Inside Our <br><span class="text-primary italic">Green Haven.</span>
+                    </h2>
+                </div>
+                <p class="text-gray-400 max-w-sm border-l border-primary/30 pl-6 text-sm">
+                    A glimpse into the atmosphere, the crafts, and the nature that defines the Haven Cafe experience.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <template x-for="img in [
+                    'images/haven-cafe-1.png', 'images/coffee-and-leaf.avif', 
+                    'images/haven-cafe-2.png', 'images/food.png', 
+                    'images/haven-cafe-3.png', 'images/cup-of-coffee.avif', 
+                    'images/drink.png', 'images/two-guns-espresso.avif'
+                ]" :key="img">
+                    <div @click="activeImg = img; open = true"
+                        class="aspect-[4/5] overflow-hidden group relative border border-white/5 cursor-pointer">
+                        <img :src="img"
+                            class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                        <div
+                            class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+                            <i class="fa-solid fa-magnifying-glass-plus text-white text-xl"></i>
+                        </div>
+                    </div>
+                </template>
+            </div>
+        </div>
+
+        <div x-show="open" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0"
+            x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in duration-200"
+            x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0"
+            class="fixed inset-0 z-[100] flex items-center justify-center bg-black/95 p-4 md:p-10"
+            style="display: none;">
+
+            <button @click="open = false"
+                class="absolute top-6 right-6 text-white text-4xl hover:text-primary transition z-[110]">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="relative max-w-5xl max-h-full w-full h-full flex items-center justify-center"
+                @click.away="open = false">
+                <img :src="activeImg" x-transition:enter="transition ease-out duration-500 delay-100"
+                    x-transition:enter-start="scale-90 opacity-0" x-transition:enter-end="scale-100 opacity-100"
+                    class="max-w-full max-h-full object-contain shadow-2xl">
+            </div>
+        </div>
+    </section>
+
+
+    <section id="reviews" class="py-24 bg-gray-100 dark:bg-dark overflow-hidden">
+        <div class="container mx-auto px-6 mb-12 flex justify-between items-end">
+            <div class="max-w-xl">
+                <h4 class="text-primary font-bold uppercase text-xs tracking-[0.3em] mb-3">Community Voice</h4>
+                <h2 class="text-4xl md:text-5xl font-black uppercase tracking-tighter">What They <span
+                        class="text-primary italic">Say.</span></h2>
+            </div>
+            <div
+                class="flex items-center gap-3 bg-gray-50 dark:bg-dark border border-gray-100 dark:border-gray-800 px-5 py-3 shadow-sm">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="w-6 h-6">
+                    <path fill="#FFC107"
+                        d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z">
+                    </path>
+                    <path fill="#FF3D00"
+                        d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z">
+                    </path>
+                    <path fill="#4CAF50"
+                        d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z">
+                    </path>
+                    <path fill="#1976D2"
+                        d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z">
+                    </path>
+                </svg>
+                <div class="flex flex-col">
+                    <span class="text-xs font-black uppercase tracking-widest leading-none">Excellent</span>
+                    <span class="text-sm font-bold text-gray-500">4.8 / 5.0 Rating</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="relative flex overflow-x-hidden group">
+            <div class="flex animate-marquee whitespace-nowrap gap-6 py-4">
+
+                <div
+                    class="w-[350px] bg-gray-50 dark:bg-dark border border-gray-100 dark:border-gray-800 p-8 flex-shrink-0 whitespace-normal hover:border-primary transition duration-500">
+                    <div class="flex gap-1 text-orange-400 mb-4 text-xs">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm italic mb-6">"The best coffee spot in Sentani!
+                        The Papuan highland blend is authentic and the garden atmosphere is so peaceful."</p>
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center font-bold text-primary">
+                            A</div>
+                        <div>
+                            <h5 class="text-sm font-black uppercase">Andre Wijaya</h5>
+                            <p class="text-[10px] text-gray-400 uppercase tracking-widest">Local Guide</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="w-[350px] bg-gray-50 dark:bg-dark border border-gray-100 dark:border-gray-800 p-8 flex-shrink-0 whitespace-normal hover:border-primary transition duration-500">
+                    <div class="flex gap-1 text-orange-400 mb-4 text-xs">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm italic mb-6">"Perfect place for a mini wedding.
+                        We held our intimate ceremony in the garden and the staff was incredibly helpful."</p>
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center font-bold text-blue-600">
+                            S</div>
+                        <div>
+                            <h5 class="text-sm font-black uppercase">Sarah Papua</h5>
+                            <p class="text-[10px] text-gray-400 uppercase tracking-widest">Photographer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="w-[350px] bg-gray-50 dark:bg-dark border border-gray-100 dark:border-gray-800 p-8 flex-shrink-0 whitespace-normal hover:border-primary transition duration-500">
+                    <div class="flex gap-1 text-orange-400 mb-4 text-xs">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm italic mb-6">"Sentani Cold Brew is a game
+                        changer. Very smooth and refreshing. Great Wi-Fi for remote working too!"</p>
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center font-bold text-green-600">
+                            M</div>
+                        <div>
+                            <h5 class="text-sm font-black uppercase">Michael Tan</h5>
+                            <p class="text-[10px] text-gray-400 uppercase tracking-widest">Digital Nomad</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="w-[350px] bg-gray-50 dark:bg-dark border border-gray-100 dark:border-gray-800 p-8 flex-shrink-0 whitespace-normal hover:border-primary transition duration-500">
+                    <div class="flex gap-1 text-orange-400 mb-4 text-xs">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm italic mb-6">"Lovely atmosphere. The burger is a
+                        must-try! It's rare to find a place that excels in both food and coffee."</p>
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-10 h-10 rounded-full bg-yellow-100 flex items-center justify-center font-bold text-yellow-600">
+                            D</div>
+                        <div>
+                            <h5 class="text-sm font-black uppercase">Dewi Persik</h5>
+                            <p class="text-[10px] text-gray-400 uppercase tracking-widest">Food Vlogger</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="w-[350px] bg-gray-50 dark:bg-dark border border-gray-100 dark:border-gray-800 p-8 flex-shrink-0 whitespace-normal hover:border-primary transition duration-500">
+                    <div class="flex gap-1 text-orange-400 mb-4 text-xs">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm italic mb-6">"Came here for a garden meeting.
+                        Very professional service and the environment really helps creative thinking."</p>
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center font-bold text-purple-600">
+                            R</div>
+                        <div>
+                            <h5 class="text-sm font-black uppercase">Rian Adit</h5>
+                            <p class="text-[10px] text-gray-400 uppercase tracking-widest">Business Owner</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="w-[350px] bg-gray-50 dark:bg-dark border border-gray-100 dark:border-gray-800 p-8 flex-shrink-0 whitespace-normal hover:border-primary transition duration-500">
+                    <div class="flex gap-1 text-orange-400 mb-4 text-xs">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm italic mb-6">"Hidden gem in Sentani. Clean,
+                        aesthetic, and the prices are very reasonable for the quality you get."</p>
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center font-bold text-red-600">
+                            L</div>
+                        <div>
+                            <h5 class="text-sm font-black uppercase">Linda K.</h5>
+                            <p class="text-[10px] text-gray-400 uppercase tracking-widest">Traveler</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex animate-marquee whitespace-nowrap gap-6 py-4" aria-hidden="true">
+                <div
+                    class="w-[350px] bg-gray-50 dark:bg-dark border border-gray-100 dark:border-gray-800 p-8 flex-shrink-0">
+                    ...</div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <footer id="contact" class="bg-dark text-white pt-24 pb-32 md:pb-12 border-t border-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-20 mb-20">
+                <div>
+                    <h4 class="text-2xl font-black uppercase mb-8 border-b border-primary inline-block">Our Location
+                    </h4>
+                    <p class="text-gray-400 text-lg mb-4">Ex-Bosco Fernandez, Jl. Gereja Silo, Hinekombe, Sentani,
+                        Papua.</p>
+                    <p class="text-gray-400 text-lg mb-10">WhatsApp: +62 823 1100 5950</p>
+
+                    <div class="flex flex-wrap gap-3">
+                        <a href="#"
+                            class="w-12 h-12 border border-gray-700 flex items-center justify-center hover:bg-primary transition text-xl"><i
+                                class="fa-solid fa-rss"></i></a>
+                        <a href="https://www.instagram.com/qwerty.cake20/"
+                            class="w-12 h-12 border border-gray-700 flex items-center justify-center hover:bg-primary transition text-xl"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a href="#"
+                            class="w-12 h-12 border border-gray-700 flex items-center justify-center hover:bg-primary transition text-xl"><i
+                                class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"
+                            class="w-12 h-12 border border-gray-700 flex items-center justify-center hover:bg-primary transition text-xl"><i
+                                class="fa-brands fa-tiktok"></i></a>
+                        <a href="#"
+                            class="w-12 h-12 border border-gray-700 flex items-center justify-center hover:bg-primary transition text-xl"><i
+                                class="fa-brands fa-youtube"></i></a>
+                        <a href="#"
+                            class="w-12 h-12 border border-gray-700 flex items-center justify-center hover:bg-primary transition text-xl"><i
+                                class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-gray-800 border-8 border-darkLighter h-80 grayscale hover:grayscale-0 transition duration-500">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3985.877022068411!2d140.4851!3d-2.5833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMsKwMzUnMDAuMCJTIDE0MMKwMjknMDYuNCJF!5e0!3m2!1sen!2sid!4v1700000000000"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+
+            <div
+                class="pt-8 border-t border-gray-800 text-center md:text-left flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-gray-600 text-xs uppercase tracking-widest">© 2026 Haven Cafe Sentani. All Rights
+                    Reserved.</p>
+                <a href="https://www.nokensoft.com"
+                    class="text-gray-600 text-xs uppercase tracking-widest hover:text-primary transition">Powered by
+                    Nokensoft</a>
+            </div>
+        </div>
+    </footer>
+
+    <div
+        class="fixed bottom-0 left-0 right-0 bg-white dark:bg-dark border-t border-gray-200 dark:border-gray-800 md:hidden z-50 grid grid-cols-5 h-20">
+        <a href="#home" @click="currentSection = 'home'"
+            class="flex items-center justify-center border-r border-gray-100 dark:border-gray-800"
+            :class="currentSection === 'home' ? 'text-primary bg-gray-50 dark:bg-darkLighter' : 'text-gray-400'">
+            <i class="fa-solid fa-house"></i>
+        </a>
+        <a href="#menu" @click="currentSection = 'menu'"
+            class="flex items-center justify-center border-r border-gray-100 dark:border-gray-800"
+            :class="currentSection === 'menu' ? 'text-primary bg-gray-50 dark:bg-darkLighter' : 'text-gray-400'">
+            <i class="fa-solid fa-mug-saucer"></i>
+        </a>
+        <button @click="darkMode = !darkMode; localStorage.setItem('theme', darkMode ? 'dark' : 'light')"
+            class="bg-primary text-white flex items-center justify-center">
+            <i class="fa-solid" :class="darkMode ? 'fa-sun' : 'fa-moon'"></i>
+        </button>
+        <a href="#reservation" @click="currentSection = 'reservation'"
+            class="flex items-center justify-center border-l border-gray-100 dark:border-gray-800"
+            :class="currentSection === 'reservation' ? 'text-primary bg-gray-50 dark:bg-darkLighter' : 'text-gray-400'">
+            <i class="fa-solid fa-seedling"></i>
+        </a>
+        <a href="#contact" @click="currentSection = 'contact'"
+            class="flex items-center justify-center border-l border-gray-100 dark:border-gray-800"
+            :class="currentSection === 'contact' ? 'text-primary bg-gray-50 dark:bg-darkLighter' : 'text-gray-400'">
+            <i class="fa-solid fa-map-pin"></i>
+        </a>
+    </div>
+
+</body>
+
+</html>
