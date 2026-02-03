@@ -1,0 +1,38 @@
+[
+    {
+        "nama": "Andre Wijaya",
+        "peran": "Local Guide",
+        "rating": 5,
+        "ulasan": "The best coffee spot in Sentani! The highland blend is authentic and the garden is so peaceful.",
+        "inisial": "A",
+        "warna_bg": "bg-primary/20",
+        "warna_teks": "text-primary"
+    },
+    {
+        "nama": "Sarah Papua",
+        "peran": "Photographer",
+        "rating": 5,
+        "ulasan": "Perfect place for a mini wedding. The staff was incredibly helpful for our intimate ceremony.",
+        "inisial": "S",
+        "warna_bg": "bg-blue-100",
+        "warna_teks": "text-blue-600"
+    },
+    {
+        "nama": "Michael Tan",
+        "peran": "Digital Nomad",
+        "rating": 5,
+        "ulasan": "Sentani Cold Brew is a game changer. Very smooth and refreshing. Great Wi-Fi for working!",
+        "inisial": "M",
+        "warna_bg": "bg-green-100",
+        "warna_teks": "text-green-600"
+    },
+    {
+        "nama": "Dewi Persik",
+        "peran": "Food Vlogger",
+        "rating": 5,
+        "ulasan": "Lovely atmosphere. The burger is a must-try! One of the best hidden gems in Sentani.",
+        "inisial": "D",
+        "warna_bg": "bg-yellow-100",
+        "warna_teks": "text-yellow-600"
+    }
+]

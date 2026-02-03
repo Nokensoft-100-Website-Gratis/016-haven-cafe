@@ -1,0 +1,134 @@
+[
+  {
+    "menu_name": "JUMBO Es Teh",
+    "category": "Jumbo Iced Tea",
+    "description": "Es teh manis dalam ukuran jumbo yang menyegarkan.",
+    "default_selection": "cold",
+    "options": {
+      "hot": { "available": false, "price": 0, "image": null },
+      "cold": { "available": true, "price": 27500, "image": "images/menu/jumbo-esteh.png" }
+    },
+    "status": true
+  },
+  {
+    "menu_name": "JUMBO Lemon",
+    "category": "Jumbo Iced Tea",
+    "description": "Es teh lemon ukuran jumbo dengan rasa asam manis yang pas.",
+    "default_selection": "cold",
+    "options": {
+      "hot": { "available": false, "price": 0, "image": null },
+      "cold": { "available": true, "price": 55000, "image": "images/menu/jumbo-lemon.png" }
+    },
+    "status": true
+  },
+  {
+    "menu_name": "JUMBO Lychee",
+    "category": "Jumbo Iced Tea",
+    "description": "Es teh rasa leci ukuran jumbo dengan aroma buah yang kuat.",
+    "default_selection": "cold",
+    "options": {
+      "hot": { "available": false, "price": 0, "image": null },
+      "cold": { "available": true, "price": 55000, "image": "images/menu/jumbo-lychee.png" }
+    },
+    "status": true
+  },
+  {
+    "menu_name": "JUMBO Peach",
+    "category": "Jumbo Iced Tea",
+    "description": "Es teh rasa persik ukuran jumbo yang aromatik.",
+    "default_selection": "cold",
+    "options": {
+      "hot": { "available": false, "price": 0, "image": null },
+      "cold": { "available": true, "price": 55000, "image": "images/menu/jumbo-peach.png" }
+    },
+    "status": true
+  },
+  {
+    "menu_name": "JUMBO Markisa Mango",
+    "category": "Jumbo Iced Tea",
+    "description": "Perpaduan rasa eksotis markisa dan mangga dalam ukuran jumbo.",
+    "default_selection": "cold",
+    "options": {
+      "hot": { "available": false, "price": 0, "image": null },
+      "cold": { "available": true, "price": 55000, "image": "images/menu/jumbo-markisa-mango.png" }
+    },
+    "status": true
+  },
+  {
+    "menu_name": "Tea Lemon",
+    "category": "Regular Sized",
+    "description": "Teh lemon ukuran reguler, tersedia pilihan panas atau dingin.",
+    "default_selection": "cold",
+    "options": {
+      "hot": { "available": true, "price": 30800, "image": "images/menu/lemon-tea-hot.png" },
+      "cold": { "available": true, "price": 34100, "image": "images/menu/lemon-tea-cold.png" }
+    },
+    "status": true
+  },
+  {
+    "menu_name": "Tea Lychee",
+    "category": "Regular Sized",
+    "description": "Teh leci ukuran reguler dengan rasa buah yang segar.",
+    "default_selection": "cold",
+    "options": {
+      "hot": { "available": true, "price": 38500, "image": "images/menu/lychee-tea-hot.png" },
+      "cold": { "available": true, "price": 38500, "image": "images/menu/lychee-tea-cold.png" }
+    },
+    "status": true
+  },
+  {
+    "menu_name": "Tea Peach",
+    "category": "Regular Sized",
+    "description": "Teh persik ukuran reguler yang manis dan wangi.",
+    "default_selection": "cold",
+    "options": {
+      "hot": { "available": true, "price": 38500, "image": "images/menu/peach-tea-hot.png" },
+      "cold": { "available": true, "price": 38500, "image": "images/menu/peach-tea-cold.png" }
+    },
+    "status": true
+  },
+  {
+    "menu_name": "Tea Markisa Mango",
+    "category": "Regular Sized",
+    "description": "Teh rasa markisa dan mangga ukuran reguler.",
+    "default_selection": "cold",
+    "options": {
+      "hot": { "available": true, "price": 38500, "image": "images/menu/markisa-mango-hot.png" },
+      "cold": { "available": true, "price": 38500, "image": "images/menu/markisa-mango-cold.png" }
+    },
+    "status": true
+  },
+  {
+    "menu_name": "Teh Sariwangi",
+    "category": "Regular Sized",
+    "description": "Teh hitam klasik Sariwangi.",
+    "default_selection": "hot",
+    "options": {
+      "hot": { "available": true, "price": 13200, "image": "images/menu/sariwangi-hot.png" },
+      "cold": { "available": true, "price": 16500, "image": "images/menu/sariwangi-cold.png" }
+    },
+    "status": true
+  },
+  {
+    "menu_name": "Teh Jahe",
+    "category": "Regular Sized",
+    "description": "Teh dengan ekstrak jahe yang hangat dan menenangkan.",
+    "default_selection": "hot",
+    "options": {
+      "hot": { "available": true, "price": 30800, "image": "images/menu/teh-jahe-hot.png" },
+      "cold": { "available": true, "price": 34100, "image": "images/menu/teh-jahe-cold.png" }
+    },
+    "status": true
+  },
+  {
+    "menu_name": "Teh Jahe Sere",
+    "category": "Regular Sized",
+    "description": "Teh herbal dengan paduan jahe dan serai.",
+    "default_selection": "hot",
+    "options": {
+      "hot": { "available": true, "price": 30800, "image": "images/menu/jahe-sere-hot.png" },
+      "cold": { "available": true, "price": 34100, "image": "images/menu/jahe-sere-cold.png" }
+    },
+    "status": true
+  }
+]

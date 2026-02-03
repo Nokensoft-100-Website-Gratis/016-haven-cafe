@@ -1,0 +1,48 @@
+{
+  "categoryId": "makanan-western",
+  "categoryName": "Aneka Makanan Western",
+  "items": [
+    {
+      "id": "spaghetti-carbonara",
+      "name": "Spaghetti Carbonara",
+      "description": "Pasta dengan saus cream dan bacon",
+      "price": 42000,
+      "available": true
+    },
+    {
+      "id": "spaghetti-bolognese",
+      "name": "Spaghetti Bolognese",
+      "description": "Pasta dengan saus tomat dan daging",
+      "price": 40000,
+      "available": true
+    },
+    {
+      "id": "fettuccine-alfredo",
+      "name": "Fettuccine Alfredo",
+      "description": "Pasta dengan saus putih creamy",
+      "price": 45000,
+      "available": true
+    },
+    {
+      "id": "chicken-burger",
+      "name": "Chicken Burger",
+      "description": "Burger ayam dengan sayuran segar",
+      "price": 35000,
+      "available": true
+    },
+    {
+      "id": "beef-burger",
+      "name": "Beef Burger",
+      "description": "Burger daging sapi juicy",
+      "price": 40000,
+      "available": true
+    },
+    {
+      "id": "mac-and-cheese",
+      "name": "Mac and Cheese",
+      "description": "Makaroni dengan keju lembut",
+      "price": 35000,
+      "available": true
+    }
+  ]
+}

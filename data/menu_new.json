@@ -1,0 +1,75 @@
+[
+  {
+    "menu_name": "Sentani Cold Brew",
+    "category": "Popular",
+    "description": "Steeped for 12 hours to produce a smooth, refreshing, and low-acidity coffee.",
+    "default_selection": "cold",
+    "options": {
+      "hot": {
+        "available": false,
+        "price": 0,
+        "image": null
+      },
+      "cold": {
+        "available": true,
+        "price": 30000,
+        "image": "images/sentani-cold-brew.png"
+      }
+    },
+    "status": true
+  },
+  {
+    "menu_name": "Jayapura Caramel Latte",
+    "category": "Coffee",
+    "description": "A rich espresso topped with steamed milk and a swirl of sweet caramel.",
+    "default_selection": "hot",
+    "options": {
+      "hot": {
+        "available": true,
+        "price": 32000,
+        "image": "images/caramel-latte-hot.png"
+      },
+      "cold": {
+        "available": true,
+        "price": 35000,
+        "image": "images/caramel-latte-cold.png"
+      }
+    },
+    "status": true
+  },
+  {
+    "menu_name": "Papuan Highland Chocolate",
+    "category": "Non-Coffee",
+    "description": "Premium local cocoa blended with creamy milk for a comforting treat.",
+    "default_selection": "hot",
+    "options": {
+      "hot": {
+        "available": true,
+        "price": 28000,
+        "image": "images/chocolate-hot.png"
+      },
+      "cold": {
+        "available": true,
+        "price": 31000,
+        "image": "images/chocolate-cold.png"
+      }
+    },
+    "status": true
+  },
+  {
+    "menu_name": "Brownies Keju",
+    "category": "Cake",
+    "description": "Delicious fudgy brownies topped with a generous layer of grated cheese.",
+    "default_selection": null,
+    "options": {
+      "normal": {
+        "available": true,
+        "price": 28000,
+        "image": "images/menu/food/Brownies Keju.webp"
+      },
+      "hot": { "available": false },
+      "cold": { "available": false }
+    },
+    "status": true
+  }
+]

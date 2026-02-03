@@ -1,0 +1,41 @@
+{
+  "categoryId": "frappe-series",
+  "categoryName": "Frappe Series",
+  "items": [
+    {
+      "id": "caramel-frappe",
+      "name": "Caramel Frappe",
+      "description": "Frappe dengan caramel yang manis",
+      "price": 30000,
+      "available": true
+    },
+    {
+      "id": "mocha-frappe",
+      "name": "Mocha Frappe",
+      "description": "Frappe kopi dengan cokelat",
+      "price": 32000,
+      "available": true
+    },
+    {
+      "id": "vanilla-frappe",
+      "name": "Vanilla Frappe",
+      "description": "Frappe vanilla yang lembut",
+      "price": 30000,
+      "available": true
+    },
+    {
+      "id": "oreo-frappe",
+      "name": "Oreo Frappe",
+      "description": "Frappe dengan Oreo crumble",
+      "price": 33000,
+      "available": true
+    },
+    {
+      "id": "matcha-frappe",
+      "name": "Matcha Frappe",
+      "description": "Frappe matcha yang segar",
+      "price": 32000,
+      "available": true
+    }
+  ]
+}

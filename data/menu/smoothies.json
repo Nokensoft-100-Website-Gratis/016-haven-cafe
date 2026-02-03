@@ -1,0 +1,59 @@
+[
+  {
+    "menu_name": "Berry Lovers",
+    "category": "Smoothies Bowl",
+    "description": "Perpaduan Blueberry, Strawberry, Raspberry, dan Blackberry. Termasuk granola rumahan, kacang sangrai, kelapa sangrai, chia seeds, dan biji bunga matahari.",
+    "default_selection": "Standard",
+    "options": {
+      "standard": {
+        "available": true,
+        "price": 44000,
+        "image": "images/menu/smoothies-berry-standard.png"
+      },
+      "super": {
+        "available": true,
+        "price": 55000,
+        "image": "images/menu/smoothies-berry-super.png"
+      }
+    },
+    "status": true
+  },
+  {
+    "menu_name": "Strawberry",
+    "category": "Smoothies Bowl",
+    "description": "Smoothies buah strawberry segar. Termasuk granola rumahan, kacang sangrai, kelapa sangrai, chia seeds, dan biji bunga matahari.",
+    "default_selection": "Standard",
+    "options": {
+      "standard": {
+        "available": true,
+        "price": 44000,
+        "image": "images/menu/smoothies-strawberry-standard.png"
+      },
+      "super": {
+        "available": true,
+        "price": 55000,
+        "image": "images/menu/smoothies-strawberry-super.png"
+      }
+    },
+    "status": true
+  },
+  {
+    "menu_name": "Buah Naga & Pisang",
+    "category": "Smoothies Bowl",
+    "description": "Kombinasi sehat buah naga dan pisang. Termasuk granola rumahan, kacang sangrai, kelapa sangrai, chia seeds, dan biji bunga matahari.",
+    "default_selection": "Standard",
+    "options": {
+      "standard": {
+        "available": true,
+        "price": 44000,
+        "image": "images/menu/smoothies-naga-pisang-standard.png"
+      },
+      "super": {
+        "available": true,
+        "price": 55000,
+        "image": "images/menu/smoothies-naga-pisang-super.png"
+      }
+    },
+    "status": true
+  }
+]
