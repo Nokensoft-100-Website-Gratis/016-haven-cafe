@@ -40,9 +40,9 @@
     <meta name="msapplication-TileColor" content="#1a4d2e">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="./images/logo.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./images/logo.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="./images/logo.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/logo-dark.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/logo-dark.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/logo-dark.png">
     
     <!-- Preconnect for Performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -128,7 +128,10 @@
     <nav class="fixed top-0 w-full bg-white/95 dark:bg-dark/95 border-b border-gray-200 dark:border-gray-800 z-50" role="navigation" aria-label="Main navigation">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
            <a href="./" class="flex items-center gap-2 text-primary dark:text-gray-300 font-bold text-xl uppercase tracking-tighter" aria-label="Haven Cafe - Home">
-                <img src="images/logo.png" alt="Haven Cafe Logo" class="h-12 w-auto object-contain">
+                <img src="images/logo-dark.png" alt="Haven Cafe Logo" class="h-14 w-auto object-contain dark:hidden">
+                
+                <img src="images/logo-light.png" alt="Haven Cafe Logo" class="hidden dark:block h-14 w-auto object-contain">
+                
                 <span>Haven Cafe</span>
             </a>
 
