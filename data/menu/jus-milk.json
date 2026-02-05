@@ -6,7 +6,7 @@
     "default_selection": "cold",
     "options": {
       "hot": { "available": false, "price": 0, "image": null },
-      "cold": { "available": true, "price": 38500, "image": "images/menu/jus-alpukat.png" }
+      "cold": { "available": true, "price": 38500, "image": "images/logo.png" }
     },
     "status": true
   },
@@ -17,7 +17,7 @@
     "default_selection": "cold",
     "options": {
       "hot": { "available": false, "price": 0, "image": null },
-      "cold": { "available": true, "price": 44000, "image": "images/menu/avopresso.png" }
+      "cold": { "available": true, "price": 44000, "image": "images/logo.png" }
     },
     "status": true
   },
@@ -28,7 +28,7 @@
     "default_selection": "cold",
     "options": {
       "hot": { "available": false, "price": 0, "image": null },
-      "cold": { "available": true, "price": 33000, "image": "images/menu/jus-stroberi.png" }
+      "cold": { "available": true, "price": 33000, "image": "images/logo.png" }
     },
     "status": true
   },
@@ -39,7 +39,7 @@
     "default_selection": "cold",
     "options": {
       "hot": { "available": false, "price": 0, "image": null },
-      "cold": { "available": true, "price": 44000, "image": "images/menu/berry-lovers.png" }
+      "cold": { "available": true, "price": 44000, "image": "images/logo.png" }
     },
     "status": true
   }

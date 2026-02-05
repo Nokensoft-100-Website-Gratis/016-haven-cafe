@@ -5,7 +5,7 @@
     "description": "Kentang goreng renyah standar.",
     "default_selection": "hot",
     "options": {
-      "hot": { "available": true, "price": 33000, "image": "images/menu/kentang-goreng.png" }
+      "hot": { "available": true, "price": 33000, "image": "images/logo.png" }
     },
     "status": true
   },
@@ -15,7 +15,7 @@
     "description": "Kombinasi kentang goreng dengan 1 potong sosis.",
     "default_selection": "hot",
     "options": {
-      "hot": { "available": true, "price": 44000, "image": "images/menu/kentang-sosis.png" }
+      "hot": { "available": true, "price": 44000, "image": "images/logo.png" }
     },
     "status": true
   },
@@ -25,7 +25,7 @@
     "description": "Kombinasi kentang goreng dengan 5 potong nugget ayam.",
     "default_selection": "hot",
     "options": {
-      "hot": { "available": true, "price": 44000, "image": "images/menu/kentang-nugget.png" }
+      "hot": { "available": true, "price": 44000, "image": "images/logo.png" }
     },
     "status": true
   },
@@ -35,7 +35,7 @@
     "description": "Porsi lengkap berisi kentang goreng, 1 potong sosis, dan 5 potong nugget ayam.",
     "default_selection": "hot",
     "options": {
-      "hot": { "available": true, "price": 55000, "image": "images/menu/kentang-komplit.png" }
+      "hot": { "available": true, "price": 55000, "image": "images/logo.png" }
     },
     "status": true
   },
@@ -45,7 +45,7 @@
     "description": "Kentang goreng dengan lelehan keju mozzarella di atasnya.",
     "default_selection": "hot",
     "options": {
-      "hot": { "available": true, "price": 44000, "image": "images/menu/kentang-mozza.png" }
+      "hot": { "available": true, "price": 44000, "image": "images/logo.png" }
     },
     "status": true
   },
@@ -55,7 +55,7 @@
     "description": "3 potong sosis goreng.",
     "default_selection": "hot",
     "options": {
-      "hot": { "available": true, "price": 33000, "image": "images/menu/sosis-goreng.png" }
+      "hot": { "available": true, "price": 33000, "image": "images/logo.png" }
     },
     "status": true
   },
@@ -65,7 +65,7 @@
     "description": "10 potong ayam nugget goreng.",
     "default_selection": "hot",
     "options": {
-      "hot": { "available": true, "price": 33000, "image": "images/menu/nugget-ayam.png" }
+      "hot": { "available": true, "price": 33000, "image": "images/logo.png" }
     },
     "status": true
   },
@@ -75,7 +75,7 @@
     "description": "Sukun goreng renyah disajikan dengan sambal ulek pisah.",
     "default_selection": "hot",
     "options": {
-      "hot": { "available": true, "price": 33000, "image": "images/menu/sukun-goreng.png" }
+      "hot": { "available": true, "price": 33000, "image": "images/logo.png" }
     },
     "status": true
   },
@@ -85,7 +85,7 @@
     "description": "Singkong goreng yang dibaluti dengan kulit lumpia untuk tekstur ekstra renyah.",
     "default_selection": "hot",
     "options": {
-      "hot": { "available": true, "price": 33000, "image": "images/menu/singkong-goreng.png" }
+      "hot": { "available": true, "price": 33000, "image": "images/logo.png" }
     },
     "status": true
   },
@@ -95,7 +95,7 @@
     "description": "Tortilla goreng dengan saus mayonnaise, tomat, dan keju mozzarella.",
     "default_selection": "hot",
     "options": {
-      "hot": { "available": true, "price": 33000, "image": "images/menu/nachos.png" }
+      "hot": { "available": true, "price": 33000, "image": "images/logo.png" }
     },
     "status": true
   },
@@ -105,7 +105,7 @@
     "description": "Brownies dengan taburan keju (Ketersediaan terbatas, silakan tanya barista).",
     "default_selection": "hot",
     "options": {
-      "hot": { "available": true, "price": 16500, "image": "images/menu/brownies-keju.png" }
+      "hot": { "available": true, "price": 16500, "image": "images/logo.png" }
     },
     "status": true
   }

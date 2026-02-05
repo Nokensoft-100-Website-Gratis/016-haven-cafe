@@ -8,7 +8,7 @@
       "hot": {
         "available": true,
         "price": 55000,
-        "image": "images/menu/breakfast-platter.png"
+        "image": "images/logo.png"
       }
     },
     "status": true
@@ -22,7 +22,7 @@
       "hot": {
         "available": true,
         "price": 71500,
-        "image": "images/menu/meatloaf.png"
+        "image": "images/logo.png"
       }
     },
     "status": true
@@ -36,7 +36,7 @@
       "hot": {
         "available": true,
         "price": 71500,
-        "image": "images/menu/fish-and-chips.png"
+        "image": "images/logo.png"
       }
     },
     "status": true
@@ -50,7 +50,7 @@
       "hot": {
         "available": true,
         "price": 71500,
-        "image": "images/menu/spaghetti-bolognese.png"
+        "image": "images/logo.png"
       }
     },
     "status": true
@@ -64,7 +64,7 @@
       "hot": {
         "available": true,
         "price": 88000,
-        "image": "images/menu/ribs.png"
+        "image": "images/logo.png"
       }
     },
     "status": true

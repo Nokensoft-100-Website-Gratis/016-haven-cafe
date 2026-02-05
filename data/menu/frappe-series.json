@@ -1,41 +1,57 @@
-{
-  "categoryId": "frappe-series",
-  "categoryName": "Frappe Series",
-  "items": [
-    {
-      "id": "caramel-frappe",
-      "name": "Caramel Frappe",
-      "description": "Frappe dengan caramel yang manis",
-      "price": 30000,
-      "available": true
+[
+  {
+    "menu_name": "Caramel Frappe",
+    "category": "Frappe Series",
+    "description": "Frappe dengan caramel yang manis dan creamy.",
+    "default_selection": "cold",
+    "options": {
+      "hot": { "available": false, "price": 0, "image": null },
+      "cold": { "available": true, "price": 30000, "image": "images/logo.png" }
     },
-    {
-      "id": "mocha-frappe",
-      "name": "Mocha Frappe",
-      "description": "Frappe kopi dengan cokelat",
-      "price": 32000,
-      "available": true
+    "status": true
+  },
+  {
+    "menu_name": "Mocha Frappe",
+    "category": "Frappe Series",
+    "description": "Frappe kopi dengan cokelat yang kaya rasa.",
+    "default_selection": "cold",
+    "options": {
+      "hot": { "available": false, "price": 0, "image": null },
+      "cold": { "available": true, "price": 32000, "image": "images/logo.png" }
     },
-    {
-      "id": "vanilla-frappe",
-      "name": "Vanilla Frappe",
-      "description": "Frappe vanilla yang lembut",
-      "price": 30000,
-      "available": true
+    "status": true
+  },
+  {
+    "menu_name": "Vanilla Frappe",
+    "category": "Frappe Series",
+    "description": "Frappe vanilla yang lembut dan menyegarkan.",
+    "default_selection": "cold",
+    "options": {
+      "hot": { "available": false, "price": 0, "image": null },
+      "cold": { "available": true, "price": 30000, "image": "images/logo.png" }
     },
-    {
-      "id": "oreo-frappe",
-      "name": "Oreo Frappe",
-      "description": "Frappe dengan Oreo crumble",
-      "price": 33000,
-      "available": true
+    "status": true
+  },
+  {
+    "menu_name": "Oreo Frappe",
+    "category": "Frappe Series",
+    "description": "Frappe dengan Oreo crumble yang renyah.",
+    "default_selection": "cold",
+    "options": {
+      "hot": { "available": false, "price": 0, "image": null },
+      "cold": { "available": true, "price": 33000, "image": "images/logo.png" }
     },
-    {
-      "id": "matcha-frappe",
-      "name": "Matcha Frappe",
-      "description": "Frappe matcha yang segar",
-      "price": 32000,
-      "available": true
-    }
-  ]
-}
+    "status": true
+  },
+  {
+    "menu_name": "Matcha Frappe",
+    "category": "Frappe Series",
+    "description": "Frappe matcha yang segar dengan rasa green tea.",
+    "default_selection": "cold",
+    "options": {
+      "hot": { "available": false, "price": 0, "image": null },
+      "cold": { "available": true, "price": 32000, "image": "images/logo.png" }
+    },
+    "status": true
+  }
+]

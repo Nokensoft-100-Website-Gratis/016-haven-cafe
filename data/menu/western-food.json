@@ -5,7 +5,7 @@
     "description": "Burger sapi ukuran besar.",
     "default_selection": "hot",
     "options": {
-      "hot": { "available": true, "price": 71500, "image": "images/menu/giant-beef-burger.png" }
+      "hot": { "available": true, "price": 71500, "image": "images/logo.png" }
     },
     "status": true
   },
@@ -15,7 +15,7 @@
     "description": "Burger sapi ukuran besar disajikan dengan kentang goreng.",
     "default_selection": "hot",
     "options": {
-      "hot": { "available": true, "price": 88000, "image": "images/menu/burger-fries.png" }
+      "hot": { "available": true, "price": 88000, "image": "images/logo.png" }
     },
     "status": true
   },
@@ -25,7 +25,7 @@
     "description": "Sandwich dengan isian keju dan telur.",
     "default_selection": "hot",
     "options": {
-      "hot": { "available": true, "price": 44000, "image": "images/menu/sandwich-cheese-egg.png" }
+      "hot": { "available": true, "price": 44000, "image": "images/logo.png" }
     },
     "status": true
   },
@@ -35,7 +35,7 @@
     "description": "Sandwich dengan isian keju dan daging sapi cincang.",
     "default_selection": "hot",
     "options": {
-      "hot": { "available": true, "price": 44000, "image": "images/menu/sandwich-cheese-beef.png" }
+      "hot": { "available": true, "price": 44000, "image": "images/logo.png" }
     },
     "status": true
   },
@@ -45,7 +45,7 @@
     "description": "Sandwich lengkap dengan keju, daging sapi cincang, dan telur.",
     "default_selection": "hot",
     "options": {
-      "hot": { "available": true, "price": 49500, "image": "images/menu/sandwich-beef-egg.png" }
+      "hot": { "available": true, "price": 49500, "image": "images/logo.png" }
     },
     "status": true
   },
@@ -55,7 +55,7 @@
     "description": "Sandwich dengan isian keju dan daging sapi asap.",
     "default_selection": "hot",
     "options": {
-      "hot": { "available": true, "price": 44000, "image": "images/menu/sandwich-cheese-smoked.png" }
+      "hot": { "available": true, "price": 44000, "image": "images/logo.png" }
     },
     "status": true
   },
@@ -65,7 +65,7 @@
     "description": "Sandwich lengkap dengan keju, daging sapi asap, dan telur.",
     "default_selection": "hot",
     "options": {
-      "hot": { "available": true, "price": 49500, "image": "images/menu/sandwich-smoked-egg.png" }
+      "hot": { "available": true, "price": 49500, "image": "images/logo.png" }
     },
     "status": true
   },
@@ -75,7 +75,7 @@
     "description": "Tortilla wrap dengan isian daging sapi cincang.",
     "default_selection": "hot",
     "options": {
-      "hot": { "available": true, "price": 55000, "image": "images/menu/ground-beef-wrap.png" }
+      "hot": { "available": true, "price": 55000, "image": "images/logo.png" }
     },
     "status": true
   },
@@ -85,7 +85,7 @@
     "description": "Tortilla wrap dengan isian daging sapi asap.",
     "default_selection": "hot",
     "options": {
-      "hot": { "available": true, "price": 55000, "image": "images/menu/smoked-beef-wrap.png" }
+      "hot": { "available": true, "price": 55000, "image": "images/logo.png" }
     },
     "status": true
   },
@@ -95,7 +95,7 @@
     "description": "Tortilla wrap dengan isian chicken nugget.",
     "default_selection": "hot",
     "options": {
-      "hot": { "available": true, "price": 55000, "image": "images/menu/nugget-wrap.png" }
+      "hot": { "available": true, "price": 55000, "image": "images/logo.png" }
     },
     "status": true
   }

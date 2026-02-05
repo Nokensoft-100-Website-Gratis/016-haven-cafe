@@ -22,7 +22,7 @@
       "hot": {
         "available": true,
         "price": 27500,
-        "image": "images/menu/roti-bakar-single.png"
+        "image": "images/logo.png"
       }
     },
     "status": true
@@ -36,7 +36,7 @@
       "hot": {
         "available": true,
         "price": 38500,
-        "image": "images/menu/fried-dimsum.png"
+        "image": "images/logo.png"
       }
     },
     "status": true
@@ -50,7 +50,7 @@
       "hot": {
         "available": true,
         "price": 33000,
-        "image": "images/menu/pisang-goreng.png"
+        "image": "images/logo.png"
       }
     },
     "status": true
@@ -64,7 +64,7 @@
       "hot": {
         "available": true,
         "price": 38500,
-        "image": "images/menu/pisang-nangka.png"
+        "image": "images/logo.png"
       }
     },
     "status": true
@@ -78,7 +78,7 @@
       "hot": {
         "available": true,
         "price": 33000,
-        "image": "images/menu/pisang-goreng-topping.png"
+        "image": "images/logo.png"
       }
     },
     "status": true
@@ -92,7 +92,7 @@
       "hot": {
         "available": true,
         "price": 33000,
-        "image": "images/menu/pisang-bakar-2.png"
+        "image": "images/logo.png"
       }
     },
     "status": true
@@ -106,7 +106,7 @@
       "hot": {
         "available": true,
         "price": 22000,
-        "image": "images/menu/pisang-bakar-single.png"
+        "image": "images/logo.png"
       }
     },
     "status": true

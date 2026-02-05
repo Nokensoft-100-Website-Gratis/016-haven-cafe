@@ -2,140 +2,77 @@
   {
     "menu_name": "Tuna Pizza",
     "category": "Pizza Menu",
-    "description": "Pizza buatan rumah dengan topping tuna. Ukuran Medium (25cm) atau Mini (12cm). Opsional: Tambah Mozzarella +25k.",
+    "description": "Pizza buatan rumah dengan topping tuna. Medium (25cm) atau Mini (12cm). Tambah Mozzarella +25k.",
+    "default_selection": "hot",
     "options": {
-      "medium": {
-        "available": true,
-        "price": 88000,
-        "diameter": "25cm",
-        "image": "images/menu/pizza-tuna-medium.png"
-      },
-      "mini": {
-        "available": true,
-        "price": 38500,
-        "diameter": "12cm",
-        "image": "images/menu/pizza-tuna-mini.png"
-      }
+      "hot": { "available": true, "price": 38500, "image": "images/logo.png", "note": "Mini: Rp38.500 | Medium: Rp88.000" },
+      "cold": { "available": false, "price": 0, "image": null }
     },
     "status": true
   },
   {
     "menu_name": "Carbonara Pizza",
     "category": "Pizza Menu",
-    "description": "Pizza dengan saus carbonara yang creamy. Ukuran Medium (25cm) atau Mini (12cm). Opsional: Tambah Mozzarella +25k.",
+    "description": "Pizza dengan saus carbonara yang creamy. Medium (25cm) atau Mini (12cm). Tambah Mozzarella +25k.",
+    "default_selection": "hot",
     "options": {
-      "medium": {
-        "available": true,
-        "price": 88000,
-        "diameter": "25cm",
-        "image": "images/menu/pizza-carbonara-medium.png"
-      },
-      "mini": {
-        "available": true,
-        "price": 38500,
-        "diameter": "12cm",
-        "image": "images/menu/pizza-carbonara-mini.png"
-      }
+      "hot": { "available": true, "price": 38500, "image": "images/logo.png", "note": "Mini: Rp38.500 | Medium: Rp88.000" },
+      "cold": { "available": false, "price": 0, "image": null }
     },
     "status": true
   },
   {
     "menu_name": "Meatlover Pizza",
     "category": "Pizza Menu",
-    "description": "Pizza dengan berbagai jenis daging pilihan. Ukuran Medium (25cm) atau Mini (12cm). Opsional: Tambah Mozzarella +25k.",
+    "description": "Pizza dengan berbagai jenis daging pilihan. Medium (25cm) atau Mini (12cm). Tambah Mozzarella +25k.",
+    "default_selection": "hot",
     "options": {
-      "medium": {
-        "available": true,
-        "price": 99000,
-        "diameter": "25cm",
-        "image": "images/menu/pizza-meatlover-medium.png"
-      },
-      "mini": {
-        "available": true,
-        "price": 38500,
-        "diameter": "12cm",
-        "image": "images/menu/pizza-meatlover-mini.png"
-      }
+      "hot": { "available": true, "price": 38500, "image": "images/logo.png", "note": "Mini: Rp38.500 | Medium: Rp99.000" },
+      "cold": { "available": false, "price": 0, "image": null }
     },
     "status": true
   },
   {
     "menu_name": "Pepperoni Pizza",
     "category": "Pizza Menu",
-    "description": "Pizza klasik dengan topping pepperoni sapi. Ukuran Medium (25cm) atau Mini (12cm). Opsional: Tambah Mozzarella +25k.",
+    "description": "Pizza klasik dengan topping pepperoni sapi. Medium (25cm) atau Mini (12cm). Tambah Mozzarella +25k.",
+    "default_selection": "hot",
     "options": {
-      "medium": {
-        "available": true,
-        "price": 88000,
-        "diameter": "25cm",
-        "image": "images/menu/pizza-pepperoni-medium.png"
-      },
-      "mini": {
-        "available": true,
-        "price": 38500,
-        "diameter": "12cm",
-        "image": "images/menu/pizza-pepperoni-mini.png"
-      }
+      "hot": { "available": true, "price": 38500, "image": "images/logo.png", "note": "Mini: Rp38.500 | Medium: Rp88.000" },
+      "cold": { "available": false, "price": 0, "image": null }
     },
     "status": true
   },
   {
     "menu_name": "Hawaiian Pizza",
     "category": "Pizza Menu",
-    "description": "Perpaduan rasa manis dan gurih khas Hawaiian. Ukuran Medium (25cm) atau Mini (12cm). Opsional: Tambah Mozzarella +25k.",
+    "description": "Perpaduan rasa manis dan gurih khas Hawaiian. Medium (25cm) atau Mini (12cm). Tambah Mozzarella +25k.",
+    "default_selection": "hot",
     "options": {
-      "medium": {
-        "available": true,
-        "price": 88000,
-        "diameter": "25cm",
-        "image": "images/menu/pizza-hawaiian-medium.png"
-      },
-      "mini": {
-        "available": true,
-        "price": 38500,
-        "diameter": "12cm",
-        "image": "images/menu/pizza-hawaiian-mini.png"
-      }
+      "hot": { "available": true, "price": 38500, "image": "images/logo.png", "note": "Mini: Rp38.500 | Medium: Rp88.000" },
+      "cold": { "available": false, "price": 0, "image": null }
     },
     "status": true
   },
   {
     "menu_name": "Smoked Beef Pizza",
     "category": "Pizza Menu",
-    "description": "Pizza dengan irisan daging sapi asap. Ukuran Medium (25cm) atau Mini (12cm). Opsional: Tambah Mozzarella +25k.",
+    "description": "Pizza dengan irisan daging sapi asap. Medium (25cm) atau Mini (12cm). Tambah Mozzarella +25k.",
+    "default_selection": "hot",
     "options": {
-      "medium": {
-        "available": true,
-        "price": 88000,
-        "diameter": "25cm",
-        "image": "images/menu/pizza-smokedbeef-medium.png"
-      },
-      "mini": {
-        "available": true,
-        "price": 38500,
-        "diameter": "12cm",
-        "image": "images/menu/pizza-smokedbeef-mini.png"
-      }
+      "hot": { "available": true, "price": 38500, "image": "images/logo.png", "note": "Mini: Rp38.500 | Medium: Rp88.000" },
+      "cold": { "available": false, "price": 0, "image": null }
     },
     "status": true
   },
   {
     "menu_name": "Margarita Pizza",
     "category": "Pizza Menu",
-    "description": "Pizza klasik dengan saus tomat dan keju. Ukuran Medium (25cm) atau Mini (12cm). Opsional: Tambah Mozzarella +25k.",
+    "description": "Pizza klasik dengan saus tomat dan keju. Medium (25cm) atau Mini (12cm). Tambah Mozzarella +25k.",
+    "default_selection": "hot",
     "options": {
-      "medium": {
-        "available": true,
-        "price": 88000,
-        "diameter": "25cm",
-        "image": "images/menu/pizza-margarita-medium.png"
-      },
-      "mini": {
-        "available": true,
-        "price": 38500,
-        "diameter": "12cm",
-        "image": "images/menu/pizza-margarita-mini.png"
-      }
+      "hot": { "available": true, "price": 38500, "image": "images/logo.png", "note": "Mini: Rp38.500 | Medium: Rp88.000" },
+      "cold": { "available": false, "price": 0, "image": null }
     },
     "status": true
   }

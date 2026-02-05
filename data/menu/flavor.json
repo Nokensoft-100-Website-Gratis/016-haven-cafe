@@ -8,12 +8,12 @@
       "hot": {
         "available": true,
         "price": 44000,
-        "image": "images/menu/vanilla-hot.png"
+        "image": "images/logo.png"
       },
       "cold": {
         "available": true,
         "price": 47300,
-        "image": "images/menu/vanilla-cold.png"
+        "image": "images/logo.png"
       }
     },
     "status": true
@@ -27,12 +27,12 @@
       "hot": {
         "available": true,
         "price": 44000,
-        "image": "images/menu/caramel-hot.png"
+        "image": "images/logo.png"
       },
       "cold": {
         "available": true,
         "price": 47300,
-        "image": "images/menu/caramel-cold.png"
+        "image": "images/logo.png"
       }
     },
     "status": true
@@ -46,12 +46,12 @@
       "hot": {
         "available": true,
         "price": 44000,
-        "image": "images/menu/salted-caramel-hot.png"
+        "image": "images/logo.png"
       },
       "cold": {
         "available": true,
         "price": 47300,
-        "image": "images/menu/salted-caramel-cold.png"
+        "image": "images/logo.png"
       }
     },
     "status": true
@@ -65,12 +65,12 @@
       "hot": {
         "available": true,
         "price": 44000,
-        "image": "images/menu/hazelnut-hot.png"
+        "image": "images/logo.png"
       },
       "cold": {
         "available": true,
         "price": 47300,
-        "image": "images/menu/hazelnut-cold.png"
+        "image": "images/logo.png"
       }
     },
     "status": true
@@ -84,12 +84,12 @@
       "hot": {
         "available": true,
         "price": 44000,
-        "image": "images/menu/tiramisu-hot.png"
+        "image": "images/logo.png"
       },
       "cold": {
         "available": true,
         "price": 47300,
-        "image": "images/menu/tiramisu-cold.png"
+        "image": "images/logo.png"
       }
     },
     "status": true
@@ -103,12 +103,12 @@
       "hot": {
         "available": true,
         "price": 44000,
-        "image": "images/menu/aren-hot.png"
+        "image": "images/logo.png"
       },
       "cold": {
         "available": true,
         "price": 47300,
-        "image": "images/menu/aren-cold.png"
+        "image": "images/logo.png"
       }
     },
     "status": true
@@ -122,12 +122,12 @@
       "hot": {
         "available": true,
         "price": 44000,
-        "image": "images/menu/peppermint-hot.png"
+        "image": "images/logo.png"
       },
       "cold": {
         "available": true,
         "price": 47300,
-        "image": "images/menu/peppermint-cold.png"
+        "image": "images/logo.png"
       }
     },
     "status": true
@@ -141,12 +141,12 @@
       "hot": {
         "available": true,
         "price": 44000,
-        "image": "images/menu/pandan-hot.png"
+        "image": "images/logo.png"
       },
       "cold": {
         "available": true,
         "price": 47300,
-        "image": "images/menu/pandan-cold.png"
+        "image": "images/logo.png"
       }
     },
     "status": true
@@ -160,12 +160,12 @@
       "hot": {
         "available": true,
         "price": 44000,
-        "image": "images/menu/jahe-latte-hot.png"
+        "image": "images/logo.png"
       },
       "cold": {
         "available": true,
         "price": 47300,
-        "image": "images/menu/jahe-latte-cold.png"
+        "image": "images/logo.png"
       }
     },
     "status": true

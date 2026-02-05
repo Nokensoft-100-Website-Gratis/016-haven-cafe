@@ -6,7 +6,7 @@
     "default_selection": "cold",
     "options": {
       "hot": { "available": false, "price": 0, "image": null },
-      "cold": { "available": true, "price": 27500, "image": "images/menu/salad-telur.png" }
+      "cold": { "available": true, "price": 27500, "image": "images/logo.png" }
     },
     "status": true
   },
@@ -17,7 +17,7 @@
     "default_selection": "cold",
     "options": {
       "hot": { "available": false, "price": 0, "image": null },
-      "cold": { "available": true, "price": 27500, "image": "images/menu/salad-tahu.png" }
+      "cold": { "available": true, "price": 27500, "image": "images/logo.png" }
     },
     "status": true
   },
@@ -28,7 +28,7 @@
     "default_selection": "cold",
     "options": {
       "hot": { "available": false, "price": 0, "image": null },
-      "cold": { "available": true, "price": 27500, "image": "images/menu/salad-tempe.png" }
+      "cold": { "available": true, "price": 27500, "image": "images/logo.png" }
     },
     "status": true
   },
@@ -39,7 +39,7 @@
     "default_selection": "cold",
     "options": {
       "hot": { "available": false, "price": 0, "image": null },
-      "cold": { "available": true, "price": 33000, "image": "images/menu/salad-sosis.png" }
+      "cold": { "available": true, "price": 33000, "image": "images/logo.png" }
     },
     "status": true
   },
@@ -50,7 +50,7 @@
     "default_selection": "cold",
     "options": {
       "hot": { "available": false, "price": 0, "image": null },
-      "cold": { "available": true, "price": 33000, "image": "images/menu/salad-ground-beef.png" }
+      "cold": { "available": true, "price": 33000, "image": "images/logo.png" }
     },
     "status": true
   },
@@ -61,7 +61,7 @@
     "default_selection": "cold",
     "options": {
       "hot": { "available": false, "price": 0, "image": null },
-      "cold": { "available": true, "price": 33000, "image": "images/menu/salad-smoked-beef.png" }
+      "cold": { "available": true, "price": 33000, "image": "images/logo.png" }
     },
     "status": true
   },
@@ -72,7 +72,7 @@
     "default_selection": "cold",
     "options": {
       "hot": { "available": false, "price": 0, "image": null },
-      "cold": { "available": true, "price": 33000, "image": "images/menu/salad-nugget.png" }
+      "cold": { "available": true, "price": 33000, "image": "images/logo.png" }
     },
     "status": true
   }

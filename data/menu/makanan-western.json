@@ -1,48 +1,62 @@
-{
-  "categoryId": "makanan-western",
-  "categoryName": "Aneka Makanan Western",
-  "items": [
-    {
-      "id": "spaghetti-carbonara",
-      "name": "Spaghetti Carbonara",
-      "description": "Pasta dengan saus cream dan bacon",
-      "price": 42000,
-      "available": true
+[
+  {
+    "menu_name": "Spaghetti Carbonara",
+    "category": "Aneka Makanan Western",
+    "description": "Pasta dengan saus cream dan bacon yang creamy.",
+    "default_selection": "hot",
+    "options": {
+      "hot": { "available": true, "price": 42000, "image": "images/logo.png" }
     },
-    {
-      "id": "spaghetti-bolognese",
-      "name": "Spaghetti Bolognese",
-      "description": "Pasta dengan saus tomat dan daging",
-      "price": 40000,
-      "available": true
+    "status": true
+  },
+  {
+    "menu_name": "Spaghetti Bolognese",
+    "category": "Aneka Makanan Western",
+    "description": "Pasta dengan saus tomat dan daging sapi cincang.",
+    "default_selection": "hot",
+    "options": {
+      "hot": { "available": true, "price": 40000, "image": "images/logo.png" }
     },
-    {
-      "id": "fettuccine-alfredo",
-      "name": "Fettuccine Alfredo",
-      "description": "Pasta dengan saus putih creamy",
-      "price": 45000,
-      "available": true
+    "status": true
+  },
+  {
+    "menu_name": "Fettuccine Alfredo",
+    "category": "Aneka Makanan Western",
+    "description": "Pasta dengan saus putih creamy yang lembut.",
+    "default_selection": "hot",
+    "options": {
+      "hot": { "available": true, "price": 45000, "image": "images/logo.png" }
     },
-    {
-      "id": "chicken-burger",
-      "name": "Chicken Burger",
-      "description": "Burger ayam dengan sayuran segar",
-      "price": 35000,
-      "available": true
+    "status": true
+  },
+  {
+    "menu_name": "Chicken Burger",
+    "category": "Aneka Makanan Western",
+    "description": "Burger ayam dengan sayuran segar.",
+    "default_selection": "hot",
+    "options": {
+      "hot": { "available": true, "price": 35000, "image": "images/logo.png" }
     },
-    {
-      "id": "beef-burger",
-      "name": "Beef Burger",
-      "description": "Burger daging sapi juicy",
-      "price": 40000,
-      "available": true
+    "status": true
+  },
+  {
+    "menu_name": "Beef Burger",
+    "category": "Aneka Makanan Western",
+    "description": "Burger daging sapi juicy dan lezat.",
+    "default_selection": "hot",
+    "options": {
+      "hot": { "available": true, "price": 40000, "image": "images/logo.png" }
     },
-    {
-      "id": "mac-and-cheese",
-      "name": "Mac and Cheese",
-      "description": "Makaroni dengan keju lembut",
-      "price": 35000,
-      "available": true
-    }
-  ]
-}
+    "status": true
+  },
+  {
+    "menu_name": "Mac and Cheese",
+    "category": "Aneka Makanan Western",
+    "description": "Makaroni dengan keju lembut yang meleleh.",
+    "default_selection": "hot",
+    "options": {
+      "hot": { "available": true, "price": 35000, "image": "images/logo.png" }
+    },
+    "status": true
+  }
+]

@@ -6,7 +6,7 @@
     "default_selection": "cold",
     "options": {
       "hot": { "available": false, "price": 0, "image": null },
-      "cold": { "available": true, "price": 41800, "image": "images/menu/jus-durian.png" }
+      "cold": { "available": true, "price": 41800, "image": "images/logo.png" }
     },
     "status": true
   },
@@ -17,7 +17,7 @@
     "default_selection": "cold",
     "options": {
       "hot": { "available": false, "price": 0, "image": null },
-      "cold": { "available": true, "price": 38500, "image": "images/menu/jus-nangka.png" }
+      "cold": { "available": true, "price": 38500, "image": "images/logo.png" }
     },
     "status": true
   },
@@ -28,7 +28,7 @@
     "default_selection": "cold",
     "options": {
       "hot": { "available": false, "price": 0, "image": null },
-      "cold": { "available": true, "price": 38500, "image": "images/menu/jus-naga-mangga.png" }
+      "cold": { "available": true, "price": 38500, "image": "images/logo.png" }
     },
     "status": true
   },
@@ -39,7 +39,7 @@
     "default_selection": "cold",
     "options": {
       "hot": { "available": false, "price": 0, "image": null },
-      "cold": { "available": true, "price": 38500, "image": "images/menu/jus-naga.png" }
+      "cold": { "available": true, "price": 38500, "image": "images/logo.png" }
     },
     "status": true
   },
@@ -50,7 +50,7 @@
     "default_selection": "cold",
     "options": {
       "hot": { "available": false, "price": 0, "image": null },
-      "cold": { "available": true, "price": 33000, "image": "images/menu/jus-mangga.png" }
+      "cold": { "available": true, "price": 33000, "image": "images/logo.png" }
     },
     "status": true
   },
@@ -61,7 +61,7 @@
     "default_selection": "cold",
     "options": {
       "hot": { "available": false, "price": 0, "image": null },
-      "cold": { "available": true, "price": 33000, "image": "images/menu/jus-nanas.png" }
+      "cold": { "available": true, "price": 33000, "image": "images/logo.png" }
     },
     "status": true
   },
@@ -72,7 +72,7 @@
     "default_selection": "cold",
     "options": {
       "hot": { "available": false, "price": 0, "image": null },
-      "cold": { "available": true, "price": 33000, "image": "images/menu/jus-jambu.png" }
+      "cold": { "available": true, "price": 33000, "image": "images/logo.png" }
     },
     "status": true
   },
@@ -83,7 +83,7 @@
     "default_selection": "cold",
     "options": {
       "hot": { "available": false, "price": 0, "image": null },
-      "cold": { "available": true, "price": 33000, "image": "images/menu/jus-sirsak.png" }
+      "cold": { "available": true, "price": 33000, "image": "images/logo.png" }
     },
     "status": true
   },
@@ -94,7 +94,7 @@
     "default_selection": "cold",
     "options": {
       "hot": { "available": false, "price": 0, "image": null },
-      "cold": { "available": true, "price": 27500, "image": "images/menu/jus-jeruk.png" }
+      "cold": { "available": true, "price": 27500, "image": "images/logo.png" }
     },
     "status": true
   },
@@ -105,7 +105,7 @@
     "default_selection": "cold",
     "options": {
       "hot": { "available": false, "price": 0, "image": null },
-      "cold": { "available": true, "price": 27500, "image": "images/menu/jus-nipis.png" }
+      "cold": { "available": true, "price": 27500, "image": "images/logo.png" }
     },
     "status": true
   }

@@ -6,7 +6,7 @@
     "default_selection": "cold",
     "options": {
       "hot": { "available": false, "price": 0, "image": null },
-      "cold": { "available": true, "price": 38500, "image": "images/menu/blue-lemonade.png" }
+      "cold": { "available": true, "price": 38500, "image": "images/logo.png" }
     },
     "status": true
   },
@@ -17,7 +17,7 @@
     "default_selection": "cold",
     "options": {
       "hot": { "available": false, "price": 0, "image": null },
-      "cold": { "available": true, "price": 38500, "image": "images/menu/blue-mangonade.png" }
+      "cold": { "available": true, "price": 38500, "image": "images/logo.png" }
     },
     "status": true
   },
@@ -28,7 +28,7 @@
     "default_selection": "cold",
     "options": {
       "hot": { "available": false, "price": 0, "image": null },
-      "cold": { "available": true, "price": 38500, "image": "images/menu/sunset-squash.png" }
+      "cold": { "available": true, "price": 38500, "image": "images/logo.png" }
     },
     "status": true
   },
@@ -39,7 +39,7 @@
     "default_selection": "cold",
     "options": {
       "hot": { "available": false, "price": 0, "image": null },
-      "cold": { "available": true, "price": 38500, "image": "images/menu/lychee-squash.png" }
+      "cold": { "available": true, "price": 38500, "image": "images/logo.png" }
     },
     "status": true
   },
@@ -50,7 +50,7 @@
     "default_selection": "cold",
     "options": {
       "hot": { "available": false, "price": 0, "image": null },
-      "cold": { "available": true, "price": 38500, "image": "images/menu/peach-squash.png" }
+      "cold": { "available": true, "price": 38500, "image": "images/logo.png" }
     },
     "status": true
   },
@@ -61,7 +61,7 @@
     "default_selection": "cold",
     "options": {
       "hot": { "available": false, "price": 0, "image": null },
-      "cold": { "available": true, "price": 38500, "image": "images/menu/strawberry-squash.png" }
+      "cold": { "available": true, "price": 38500, "image": "images/logo.png" }
     },
     "status": true
   },
@@ -72,7 +72,7 @@
     "default_selection": "cold",
     "options": {
       "hot": { "available": false, "price": 0, "image": null },
-      "cold": { "available": true, "price": 38500, "image": "images/menu/markissa-squash.png" }
+      "cold": { "available": true, "price": 38500, "image": "images/logo.png" }
     },
     "status": true
   },
@@ -83,7 +83,7 @@
     "default_selection": "cold",
     "options": {
       "hot": { "available": false, "price": 0, "image": null },
-      "cold": { "available": true, "price": 38500, "image": "images/menu/green-apple-squash.png" }
+      "cold": { "available": true, "price": 38500, "image": "images/logo.png" }
     },
     "status": true
   },
@@ -94,7 +94,7 @@
     "default_selection": "cold",
     "options": {
       "hot": { "available": false, "price": 0, "image": null },
-      "cold": { "available": true, "price": 38500, "image": "images/menu/lime-squash.png" }
+      "cold": { "available": true, "price": 38500, "image": "images/logo.png" }
     },
     "status": true
   },
@@ -105,7 +105,7 @@
     "default_selection": "cold",
     "options": {
       "hot": { "available": false, "price": 0, "image": null },
-      "cold": { "available": true, "price": 38500, "image": "images/menu/berry-lychee-squash.png" }
+      "cold": { "available": true, "price": 38500, "image": "images/logo.png" }
     },
     "status": true
   }

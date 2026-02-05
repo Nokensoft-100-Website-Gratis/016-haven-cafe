@@ -17,32 +17,32 @@
     <meta name="keywords" content="haven cafe, coffee shop sentani, kopi papua, roastery jayapura, cafe sentani, coffee highland papua, garden venue sentani">
     <meta name="author" content="Haven Cafe">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://havencafe.id/">
+    <link rel="canonical" href="https://havencafesentani.com/">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://havencafe.id/">
+    <meta property="og:url" content="https://havencafesentani.com/">
     <meta property="og:title" content="Haven Cafe | Coffee & Roastery Sentani Papua">
     <meta property="og:description" content="Experience the finest Papua highland coffee in the heart of Sentani. Authentic flavors blended with a modern atmosphere.">
-    <meta property="og:image" content="https://havencafe.id/images/haven-cafe-1.png">
+    <meta property="og:image" content="https://havencafesentani.com/images/logo.png">
     <meta property="og:locale" content="id_ID">
     <meta property="og:site_name" content="Haven Cafe">
     
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://havencafe.id/">
+    <meta name="twitter:url" content="https://havencafesentani.com/">
     <meta name="twitter:title" content="Haven Cafe | Coffee & Roastery Sentani Papua">
     <meta name="twitter:description" content="Experience the finest Papua highland coffee in the heart of Sentani. Authentic flavors blended with a modern atmosphere.">
-    <meta name="twitter:image" content="https://havencafe.id/images/haven-cafe-1.png">
+    <meta name="twitter:image" content="https://havencafesentani.com/images/logo.png">
     
     <!-- Theme Color -->
     <meta name="theme-color" content="#1a4d2e">
     <meta name="msapplication-TileColor" content="#1a4d2e">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/logo.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/logo.png">
     
     <!-- Preconnect for Performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -74,7 +74,7 @@
         "@type": "CafeOrCoffeeShop",
         "name": "Haven Cafe",
         "description": "Best Coffee Shop & Roastery in Sentani, Jayapura. Experience the finest Papua highland coffee.",
-        "url": "https://havencafe.id",
+        "url": "https://havencafesentani.com",
         "telephone": "+62-823-1100-5950",
         "address": {
             "@type": "PostalAddress",
@@ -110,7 +110,7 @@
             "bestRating": "5",
             "ratingCount": "150"
         },
-        "image": "https://havencafe.id/images/haven-cafe-1.png",
+        "image": "https://havencafesentani.com/images/haven-cafe-1.png",
         "sameAs": [
             "https://www.instagram.com/qwerty.cake20/"
         ]
@@ -127,8 +127,8 @@
 
     <nav class="fixed top-0 w-full bg-white/95 dark:bg-dark/95 border-b border-gray-200 dark:border-gray-800 z-50" role="navigation" aria-label="Main navigation">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="./" class="flex items-center gap-2 text-primary dark:text-gray-300 font-bold text-xl uppercase tracking-tighter" aria-label="Haven Cafe - Home">
-                <i class="fa-solid fa-shop" aria-hidden="true"></i>
+           <a href="./" class="flex items-center gap-2 text-primary dark:text-gray-300 font-bold text-xl uppercase tracking-tighter" aria-label="Haven Cafe - Home">
+                <img src="images/logo.png" alt="Haven Cafe Logo" class="h-12 w-auto object-contain">
                 <span>Haven Cafe</span>
             </a>
 
@@ -197,7 +197,7 @@
 
             <div x-data="{ 
                 activeSlide: 0, 
-                slides: ['images/coffee-and-flawer.jpg', './images/haven-cafe-3.png','./images/haven-cafe-1.png', 'images/haven-cafe-2.png'],
+                slides: ['images/haven-cafe-2.png', './images/taman.jpg','./images/haven-cafe-1.png', 'images/haven-cafe-2.png'],
                 autoPlay() { setInterval(() => { this.activeSlide = (this.activeSlide + 1) % this.slides.length }, 5000) }
             }" x-init="autoPlay()" class="relative min-h-[400px] overflow-hidden">
                 <div class="absolute inset-0 w-full h-full">
@@ -385,10 +385,10 @@
                                                           x-text="formatRupiah(item.options[item.default_selection].price)"></span>
                                                 </div>
                                                 <div class="flex gap-3 mt-2 border-t border-gray-100 dark:border-gray-800 pt-2">
-                                                    <template x-if="item.options.hot.available">
+                                                    <template x-if="item.options.hot && item.options.hot.available">
                                                         <span class="text-[9px] font-bold uppercase text-orange-500">Hot</span>
                                                     </template>
-                                                    <template x-if="item.options.cold.available">
+                                                    <template x-if="item.options.cold && item.options.cold.available">
                                                         <span class="text-[9px] font-bold uppercase text-blue-400">Cold</span>
                                                     </template>
                                                 </div>
@@ -659,70 +659,102 @@
         </div>
     </section>
 
-    <section id="gallery" x-data="{ open: false, activeImg: '' }"
-        class="py-24 bg-[#1a2e1a] dark:bg-[#0f1a0f] overflow-hidden">
-        <div class="container mx-auto px-6">
-            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
-                <div class="max-w-xl">
-                    <h4 class="text-primary font-bold uppercase text-xs tracking-[0.3em] mb-3">Visual Journey</h4>
-                    <h2 class="text-5xl md:text-6xl font-black uppercase tracking-tighter leading-none text-white">
-                        Inside Our <br><span class="text-primary italic">Green Haven.</span>
-                    </h2>
-                </div>
-                <p class="text-gray-400 max-w-sm border-l border-primary/30 pl-6 text-sm">
-                    A glimpse into the atmosphere, the crafts, and the nature that defines the Haven Cafe experience.
-                </p>
+ 
+    
+    <section id="gallery" 
+    x-data="{ 
+        open: false, 
+        activeImg: '', 
+        limit: 8, 
+        images: [
+            'images/gallery-menu-1.png', 
+            'images/gallery-menu-2.png', 
+            'images/gallery-menu-3.png', 
+            'images/gallery-menu-4.png', 
+            'images/gallery-menu-5.png', 
+            'images/gallery-menu-6.png', 
+            'images/gallery-menu-7.png', 
+            'images/gallery-menu-8.png', 
+            'images/gallery-menu-9.png',
+            'images/gallery-menu-10.png',
+            'images/gallery-menu-11.png',
+            'images/gallery-menu-12.png'
+        ] 
+    }"
+    class="py-24 bg-[#1a2e1a] dark:bg-[#0f1a0f] overflow-hidden">
+    
+    <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+            <div class="max-w-xl">
+                <h4 class="text-primary font-bold uppercase text-xs tracking-[0.3em] mb-3">Visual Journey</h4>
+                <h2 class="text-5xl md:text-6xl font-black uppercase tracking-tighter leading-none text-white">
+                    Inside Our <br><span class="text-primary italic">Green Haven.</span>
+                </h2>
             </div>
+            <p class="text-gray-400 max-w-sm border-l border-primary/30 pl-6 text-sm">
+                A glimpse into the atmosphere, the crafts, and the nature that defines the Haven Cafe experience.
+            </p>
+        </div>
 
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <template x-for="img in [
-                    'images/haven-cafe-1.png', 'images/coffee-and-leaf.avif', 
-                    'images/haven-cafe-2.png', 'images/food.png', 
-                    'images/haven-cafe-3.png', 'images/cup-of-coffee.avif', 
-                    'images/drink.png', 'images/two-guns-espresso.avif'
-                ]" :key="img">
-                    <div @click="activeImg = img; open = true"
-                        class="aspect-[4/5] overflow-hidden group relative border border-white/5 cursor-pointer"
-                        role="button"
-                        tabindex="0"
-                        @keydown.enter="activeImg = img; open = true"
-                        :aria-label="'View gallery image: ' + img">
-                        <img :src="img"
-                            :alt="'Haven Cafe gallery - ' + img.split('/').pop()"
-                            class="w-full h-full object-cover transition duration-700 group-hover:scale-110"
-                            loading="lazy">
-                        <div
-                            class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
-                            <i class="fa-solid fa-magnifying-glass-plus text-white text-xl"></i>
-                        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <template x-for="(img, index) in images.slice(0, limit)" :key="index">
+                <div @click="activeImg = img; open = true"
+                    class="aspect-[4/5] overflow-hidden group relative border border-white/5 cursor-pointer"
+                    role="button"
+                    tabindex="0"
+                    @keydown.enter="activeImg = img; open = true">
+                    
+                    <img :src="img"
+                        :alt="'Haven Cafe gallery - ' + img.split('/').pop()"
+                        class="w-full h-full object-cover transition duration-700 group-hover:scale-110"
+                        loading="lazy">
+                        
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+                        <i class="fa-solid fa-magnifying-glass-plus text-white text-xl"></i>
                     </div>
-                </template>
-            </div>
+                </div>
+            </template>
         </div>
 
-        <div x-show="open" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0"
-            x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in duration-200"
-            x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0"
-            class="fixed inset-0 z-[100] flex items-center justify-center bg-black/95 p-4 md:p-10"
-            style="display: none;">
-
-            <button @click="open = false"
-                class="absolute top-6 right-6 text-white text-4xl hover:text-primary transition z-[110]"
-                aria-label="Close gallery lightbox"
-                type="button">
-                <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+        <div class="mt-12 flex justify-center" x-show="limit < images.length">
+            <button @click="limit += 4" 
+                class="px-8 py-3 border border-primary text-primary font-bold uppercase text-xs tracking-widest hover:bg-primary hover:text-white transition-all duration-300">
+                Load More
             </button>
-
-            <div class="relative max-w-5xl max-h-full w-full h-full flex items-center justify-center"
-                @click.away="open = false"
-                @keydown.escape="open = false">
-                <img :src="activeImg" x-transition:enter="transition ease-out duration-500 delay-100"
-                    x-transition:enter-start="scale-90 opacity-0" x-transition:enter-end="scale-100 opacity-100"
-                    class="max-w-full max-h-full object-contain shadow-2xl"
-                    :alt="'Full size image: ' + activeImg">
-            </div>
         </div>
-    </section>
+    </div>
+
+    <div x-show="open" 
+        x-transition:enter="transition ease-out duration-300" 
+        x-transition:enter-start="opacity-0"
+        x-transition:enter-end="opacity-100" 
+        x-transition:leave="transition ease-in duration-200"
+        x-transition:leave-start="opacity-100" 
+        x-transition:leave-end="opacity-0"
+        class="fixed inset-0 z-[100] flex items-center justify-center bg-black/95 p-4 md:p-10"
+        style="display: none;">
+
+        <button @click="open = false"
+            class="absolute top-6 right-6 text-white text-4xl hover:text-primary transition z-[110]"
+            aria-label="Close gallery lightbox"
+            type="button">
+            <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+        </button>
+
+        <div class="relative max-w-5xl max-h-full w-full h-full flex items-center justify-center"
+            @click.away="open = false"
+            @keydown.escape="open = false">
+            <img :src="activeImg" 
+                x-transition:enter="transition ease-out duration-500 delay-100"
+                x-transition:enter-start="scale-90 opacity-0" 
+                x-transition:enter-end="scale-100 opacity-100"
+                class="max-w-full max-h-full object-contain shadow-2xl"
+                :alt="'Full size image: ' + activeImg">
+        </div>
+    </div>
+</section>
+
+
 
 
     <section id="reviews" class="py-24 bg-gray-100 dark:bg-dark" x-data="{ reviews: [] }"
@@ -806,7 +838,7 @@
                         <a href="#" aria-label="RSS Feed"
                             class="w-12 h-12 border border-gray-700 flex items-center justify-center hover:bg-primary transition text-xl"><i
                                 class="fa-solid fa-rss" aria-hidden="true"></i></a>
-                        <a href="https://www.instagram.com/qwerty.cake20/" aria-label="Follow us on Instagram" target="_blank" rel="noopener noreferrer"
+                        <a href="https://www.instagram.com/official_haven_cafe_sentani/" aria-label="Follow us on Instagram" target="_blank" rel="noopener noreferrer"
                             class="w-12 h-12 border border-gray-700 flex items-center justify-center hover:bg-primary transition text-xl"><i
                                 class="fa-brands fa-instagram" aria-hidden="true"></i></a>
                         <a href="#" aria-label="Follow us on Facebook"

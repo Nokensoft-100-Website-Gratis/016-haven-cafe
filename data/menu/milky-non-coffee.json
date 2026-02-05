@@ -8,12 +8,12 @@
       "hot": {
         "available": true,
         "price": 44000,
-        "image": "images/menu/red-velvet-hot.png"
+        "image": "images/logo.png"
       },
       "cold": {
         "available": true,
         "price": 47300,
-        "image": "images/menu/red-velvet-cold.png"
+        "image": "images/logo.png"
       }
     },
     "status": true
@@ -27,12 +27,12 @@
       "hot": {
         "available": true,
         "price": 49500,
-        "image": "images/menu/green-tea-hot.png"
+        "image": "images/logo.png"
       },
       "cold": {
         "available": true,
         "price": 52800,
-        "image": "images/menu/green-tea-cold.png"
+        "image": "images/logo.png"
       }
     },
     "status": true
@@ -46,12 +46,12 @@
       "hot": {
         "available": true,
         "price": 44000,
-        "image": "images/menu/taro-hot.png"
+        "image": "images/logo.png"
       },
       "cold": {
         "available": true,
         "price": 47300,
-        "image": "images/menu/taro-cold.png"
+        "image": "images/logo.png"
       }
     },
     "status": true
@@ -65,12 +65,12 @@
       "hot": {
         "available": true,
         "price": 44000,
-        "image": "images/menu/thai-tea-hot.png"
+        "image": "images/logo.png"
       },
       "cold": {
         "available": true,
         "price": 47300,
-        "image": "images/menu/thai-tea-cold.png"
+        "image": "images/logo.png"
       }
     },
     "status": true
@@ -84,12 +84,12 @@
       "hot": {
         "available": true,
         "price": 38500,
-        "image": "images/menu/ginger-milk-hot.png"
+        "image": "images/logo.png"
       },
       "cold": {
         "available": true,
         "price": 41800,
-        "image": "images/menu/ginger-milk-cold.png"
+        "image": "images/logo.png"
       }
     },
     "status": true
@@ -103,12 +103,12 @@
       "hot": {
         "available": true,
         "price": 38500,
-        "image": "images/menu/vanilla-milk-hot.png"
+        "image": "images/logo.png"
       },
       "cold": {
         "available": true,
         "price": 41800,
-        "image": "images/menu/vanilla-milk-cold.png"
+        "image": "images/logo.png"
       }
     },
     "status": true

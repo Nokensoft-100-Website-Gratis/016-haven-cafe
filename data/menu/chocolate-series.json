@@ -8,12 +8,12 @@
       "hot": {
         "available": true,
         "price": 49500,
-        "image": "images/menu/chocolate-hot.png"
+        "image": "images/logo.png"
       },
       "cold": {
         "available": true,
         "price": 52800,
-        "image": "images/menu/chocolate-cold.png"
+        "image": "images/logo.png"
       }
     },
     "status": true
@@ -27,12 +27,12 @@
       "hot": {
         "available": true,
         "price": 49500,
-        "image": "images/menu/choco-hazelnut-hot.png"
+        "image": "images/logo.png"
       },
       "cold": {
         "available": true,
         "price": 52800,
-        "image": "images/menu/choco-hazelnut-cold.png"
+        "image": "images/logo.png"
       }
     },
     "status": true
@@ -46,12 +46,12 @@
       "hot": {
         "available": true,
         "price": 49500,
-        "image": "images/menu/choco-almond-hot.png"
+        "image": "images/logo.png"
       },
       "cold": {
         "available": true,
         "price": 52800,
-        "image": "images/menu/choco-almond-cold.png"
+        "image": "images/logo.png"
       }
     },
     "status": true
@@ -65,12 +65,12 @@
       "hot": {
         "available": true,
         "price": 49500,
-        "image": "images/menu/choco-banana-hot.png"
+        "image": "images/logo.png"
       },
       "cold": {
         "available": true,
         "price": 52800,
-        "image": "images/menu/choco-banana-cold.png"
+        "image": "images/logo.png"
       }
     },
     "status": true
@@ -84,12 +84,12 @@
       "hot": {
         "available": true,
         "price": 49500,
-        "image": "images/menu/choco-mint-hot.png"
+        "image": "images/logo.png"
       },
       "cold": {
         "available": true,
         "price": 52800,
-        "image": "images/menu/choco-mint-cold.png"
+        "image": "images/logo.png"
       }
     },
     "status": true

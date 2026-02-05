@@ -13,7 +13,7 @@
       "cold": {
         "available": true,
         "price": 38500,
-        "image": "images/menu/markisa-berry-yakult.png"
+        "image": "images/logo.png"
       }
     },
     "status": true
@@ -32,7 +32,7 @@
       "cold": {
         "available": true,
         "price": 38500,
-        "image": "images/menu/lychee-yakult.png"
+        "image": "images/logo.png"
       }
     },
     "status": true
@@ -51,7 +51,7 @@
       "cold": {
         "available": true,
         "price": 38500,
-        "image": "images/menu/strawberry-yakult.png"
+        "image": "images/logo.png"
       }
     },
     "status": true
@@ -70,7 +70,7 @@
       "cold": {
         "available": true,
         "price": 38500,
-        "image": "images/menu/lemon-yakult.png"
+        "image": "images/logo.png"
       }
     },
     "status": true
@@ -89,7 +89,7 @@
       "cold": {
         "available": true,
         "price": 38500,
-        "image": "images/menu/mango-yakult.png"
+        "image": "images/logo.png"
       }
     },
     "status": true

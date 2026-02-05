@@ -13,7 +13,7 @@
       "cold": {
         "available": true,
         "price": 41800,
-        "image": "images/menu/basic/latte-cold.jpg"
+        "image": "images/logo.png"
       }
     },
     "status": true
@@ -32,7 +32,7 @@
       "cold": {
         "available": true,
         "price": 41800,
-        "image": "images/menu/basic/cappuccino-cold.jpg"
+        "image": "images/logo.png"
       }
     },
     "status": true
@@ -51,7 +51,7 @@
       "cold": {
         "available": true,
         "price": 47300,
-        "image": "images/menu/basic/mocchacino-cold.jpg"
+        "image": "images/logo.png"
       }
     },
     "status": true
@@ -70,7 +70,7 @@
       "cold": {
         "available": true,
         "price": 52800,
-        "image": "images/menu/basic/latte-oat-cold.jpg"
+        "image": "images/logo.png"
       }
     },
     "status": true
@@ -89,7 +89,7 @@
       "cold": {
         "available": true,
         "price": 52800,
-        "image": "images/menu/basic/almond-oat-cold.jpg"
+        "image": "images/logo.png"
       }
     },
     "status": true
