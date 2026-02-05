@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth" x-data="{ 
+<html lang="id" class="scroll-smooth" x-data="{ 
     darkMode: localStorage.getItem('theme') === 'dark',
     activeTab: 'popular',
     currentSection: 'home'
@@ -8,123 +8,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- Primary Meta Tags -->
     <title>Haven Cafe | Coffee & Roastery Sentani Papua</title>
-    <meta name="description"
-        content="Haven Cafe - Best Coffee Shop & Roastery in Sentani, Jayapura. Enjoy a cozy atmosphere with premium quality coffee.">
+    <meta name="title" content="Haven Cafe | Coffee & Roastery Sentani Papua">
+    <meta name="description" content="Haven Cafe - Best Coffee Shop & Roastery in Sentani, Jayapura. Experience the finest Papua highland coffee with authentic flavors in a modern atmosphere.">
+    <meta name="keywords" content="haven cafe, coffee shop sentani, kopi papua, roastery jayapura, cafe sentani, coffee highland papua, garden venue sentani">
+    <meta name="author" content="Haven Cafe">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://havencafe.id/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://havencafe.id/">
+    <meta property="og:title" content="Haven Cafe | Coffee & Roastery Sentani Papua">
+    <meta property="og:description" content="Experience the finest Papua highland coffee in the heart of Sentani. Authentic flavors blended with a modern atmosphere.">
+    <meta property="og:image" content="https://havencafe.id/images/haven-cafe-1.png">
+    <meta property="og:locale" content="id_ID">
+    <meta property="og:site_name" content="Haven Cafe">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://havencafe.id/">
+    <meta name="twitter:title" content="Haven Cafe | Coffee & Roastery Sentani Papua">
+    <meta name="twitter:description" content="Experience the finest Papua highland coffee in the heart of Sentani. Authentic flavors blended with a modern atmosphere.">
+    <meta name="twitter:image" content="https://havencafe.id/images/haven-cafe-1.png">
+    
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#1a4d2e">
+    <meta name="msapplication-TileColor" content="#1a4d2e">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
+    
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-
+    
+    <!-- Alpine.js -->
     <script defer src="https://unpkg.com/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
-
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap"
-        rel="stylesheet">
-
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#1a4d2e',
-                        dark: '#111827',
-                        darkLighter: '#1f2937'
-                    },
-                    fontFamily: {
-                        sans: ['Plus Jakarta Sans', 'sans-serif'],
-                    },
-                }
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/styles.css">
+    
+    <!-- Configuration & App Scripts -->
+    <script src="./js/config.js"></script>
+    <script src="./js/app.js"></script>
+    
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CafeOrCoffeeShop",
+        "name": "Haven Cafe",
+        "description": "Best Coffee Shop & Roastery in Sentani, Jayapura. Experience the finest Papua highland coffee.",
+        "url": "https://havencafe.id",
+        "telephone": "+62-823-1100-5950",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Ex-Bosco Fernandez, Jl. Gereja Silo, Hinekombe",
+            "addressLocality": "Sentani",
+            "addressRegion": "Papua",
+            "addressCountry": "ID"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": -2.5833,
+            "longitude": 140.4851
+        },
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+                "opens": "09:00",
+                "closes": "22:00"
+            },
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Sunday",
+                "opens": "12:00",
+                "closes": "23:00"
             }
-        }
+        ],
+        "servesCuisine": ["Coffee", "Western", "Indonesian"],
+        "priceRange": "$$",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "bestRating": "5",
+            "ratingCount": "150"
+        },
+        "image": "https://havencafe.id/images/haven-cafe-1.png",
+        "sameAs": [
+            "https://www.instagram.com/qwerty.cake20/"
+        ]
+    }
     </script>
-    <style>
-        .blur-gradient {
-            background: radial-gradient(circle at 50% 50%, rgba(26, 77, 46, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
-        }
-
-        .dark .blur-gradient {
-            background: radial-gradient(circle at 50% 50%, rgba(26, 77, 46, 0.15) 0%, rgba(17, 24, 39, 0) 100%);
-        }
-
-        .nav-active {
-            color: #318a55 !important;
-            border-bottom: 2px solid #318a55;
-        }
-
-        [x-cloak] {
-            display: none !important;
-        }
-
-        @keyframes float {
-            0% {
-                transform: translateY(0px) rotate(0deg);
-            }
-
-            50% {
-                transform: translateY(-20px) rotate(5deg);
-            }
-
-            100% {
-                transform: translateY(0px) rotate(0deg);
-            }
-        }
-
-        .animate-float {
-            animation: float 6s ease-in-out infinite;
-        }
-
-        .animate-float-delayed {
-            animation: float 8s ease-in-out infinite;
-            animation-delay: 2s;
-        }
-
-        @keyframes marquee {
-            0% {
-                transform: translateX(0);
-            }
-
-            100% {
-                transform: translateX(-100%);
-            }
-        }
-
-        .animate-marquee {
-            animation: marquee 40s linear infinite;
-        }
-
-        /* Optional: Pause on hover */
-        .group:hover .animate-marquee {
-            animation-play-state: paused;
-        }
-    </style>
 </head>
 
 <body class="bg-white dark:bg-dark text-dark dark:text-gray-100 transition-colors duration-300 font-sans">
 
-    <nav class="fixed top-0 w-full bg-white/95 dark:bg-dark/95 border-b border-gray-200 dark:border-gray-800 z-50">
+    <!-- Skip Link for Accessibility -->
+    <a href="#main-content" class="skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-white px-4 py-2 z-[100] rounded">
+        Skip to main content
+    </a>
+
+    <nav class="fixed top-0 w-full bg-white/95 dark:bg-dark/95 border-b border-gray-200 dark:border-gray-800 z-50" role="navigation" aria-label="Main navigation">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="./" class="flex items-center gap-2 text-primary dark:text-gray-300 font-bold text-xl uppercase tracking-tighter">
-                <i class="fa-solid fa-shop"></i>
+            <a href="./" class="flex items-center gap-2 text-primary dark:text-gray-300 font-bold text-xl uppercase tracking-tighter" aria-label="Haven Cafe - Home">
+                <i class="fa-solid fa-shop" aria-hidden="true"></i>
                 <span>Haven Cafe</span>
             </a>
 
             <div class="flex items-center gap-4 md:gap-10">
-                <div class="hidden md:flex gap-8 font-semibold text-sm uppercase tracking-widest">
+                <div class="hidden md:flex gap-8 font-semibold text-sm uppercase tracking-widest" role="menubar">
                     <a href="#home" :class="currentSection === 'home' ? 'nav-active' : ''"
-                        @click="currentSection = 'home'" class="hover:text-primary transition py-1">Home</a>
+                        @click="currentSection = 'home'" class="hover:text-primary transition py-1" role="menuitem">Home</a>
                     <a href="#menu" :class="currentSection === 'menu' ? 'nav-active' : ''"
-                        @click="currentSection = 'menu'" class="hover:text-primary transition py-1">Our Menu</a>
+                        @click="currentSection = 'menu'" class="hover:text-primary transition py-1" role="menuitem">Our Menu</a>
                     <a href="#reservation" :class="currentSection === 'reservation' ? 'nav-active' : ''"
                         @click="currentSection = 'reservation'"
-                        class="hover:text-primary transition py-1">Reservation</a>
+                        class="hover:text-primary transition py-1" role="menuitem">Reservation</a>
                 </div>
 
                 <div class="flex items-center gap-3 md:gap-4">
                     <button @click="darkMode = !darkMode; localStorage.setItem('theme', darkMode ? 'dark' : 'light')"
-                        class="w-10 h-10 border border-gray-200 dark:border-gray-700 text-primary flex items-center justify-center transition hover:bg-gray-50 dark:hover:bg-gray-800">
-                        <i class="fa-solid" :class="darkMode ? 'fa-sun' : 'fa-moon'"></i>
+                        class="w-10 h-10 border border-gray-200 dark:border-gray-700 text-primary flex items-center justify-center transition hover:bg-gray-50 dark:hover:bg-gray-800"
+                        :aria-label="darkMode ? 'Switch to light mode' : 'Switch to dark mode'"
+                        type="button">
+                        <i class="fa-solid" :class="darkMode ? 'fa-sun' : 'fa-moon'" aria-hidden="true"></i>
                     </button>
 
                     <a href="#contact"
@@ -136,7 +160,8 @@
         </div>
     </nav>
 
-    <header id="home" class="relative pt-32 pb-20 px-6 blur-gradient min-h-screen flex items-center overflow-hidden">
+    <main id="main-content">
+    <header id="home" class="relative pt-32 pb-20 px-6 blur-gradient min-h-screen flex items-center overflow-hidden" role="banner">
         <div
             class="absolute top-1/4 left-4 md:left-20 z-30 opacity-20 dark:opacity-40 animate-float pointer-events-none">
             <svg width="80" height="80" viewBox="0 0 512 512" fill="currentColor" class="text-primary drop-shadow-2xl">
@@ -182,7 +207,7 @@
                             x-transition:enter-end="opacity-100 scale-100"
                             x-transition:leave="transition ease-in duration-1000" x-transition:leave-end="opacity-0"
                             class="absolute inset-0">
-                            <img :src="slide" class="w-full h-full object-cover">
+                            <img :src="slide" :alt="'Haven Cafe atmosphere - slide ' + (index + 1)" class="w-full h-full object-cover" loading="lazy">
                         </div>
                     </template>
                 </div>
@@ -281,11 +306,14 @@
             </div>
 
             <div class="relative w-full md:w-72 group">
+                <label for="menu-search" class="sr-only">Search menu</label>
                 <input 
-                    type="text" 
+                    type="search" 
+                    id="menu-search"
                     x-model="searchQuery" 
                     placeholder="Search menu..." 
                     class="w-full bg-gray-50 dark:bg-gray-800 border-b-2 border-gray-200 dark:border-gray-700 px-4 py-3 pr-10 focus:outline-none focus:border-primary transition-all text-sm dark:text-white"
+                    aria-label="Search menu items"
                 >
                 <div class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-primary transition-colors">
                     <template x-if="!searchQuery">
@@ -342,7 +370,9 @@
                                         <div class="flex gap-4 items-start group animate-fadeIn">
                                             <div class="w-20 h-20 md:w-24 md:h-24 bg-gray-100 dark:bg-gray-800 flex-shrink-0 overflow-hidden rounded-sm">
                                                 <img :src="item.options[item.default_selection].image || 'images/placeholder.jpg'" 
-                                                     class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                                                     :alt="item.menu_name + ' - ' + item.description"
+                                                     class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+                                                     loading="lazy">
                                             </div>
 
                                             <div class="flex-grow">
@@ -584,23 +614,25 @@
                         class="bg-white dark:bg-dark border border-gray-200 dark:border-gray-800 p-8 md:p-12 shadow-2xl relative z-10">
                         <div class="grid grid-cols-1 gap-6">
                             <div class="space-y-2">
-                                <label class="text-[10px] font-bold uppercase tracking-widest text-gray-400">Your Full
+                                <label for="reservation-name" class="text-[10px] font-bold uppercase tracking-widest text-gray-400">Your Full
                                     Name</label>
-                                <input type="text" x-model="name" placeholder="Enter your name"
-                                    class="w-full bg-gray-50 dark:bg-darkLighter border border-gray-100 dark:border-gray-700 px-4 py-4 focus:outline-none focus:border-primary transition text-sm">
+                                <input type="text" id="reservation-name" x-model="name" placeholder="Enter your name"
+                                    class="w-full bg-gray-50 dark:bg-darkLighter border border-gray-100 dark:border-gray-700 px-4 py-4 focus:outline-none focus:border-primary transition text-sm"
+                                    autocomplete="name" required>
                             </div>
 
                             <div class="grid md:grid-cols-2 gap-6">
                                 <div class="space-y-2">
-                                    <label class="text-[10px] font-bold uppercase tracking-widest text-gray-400">Date &
+                                    <label for="reservation-date" class="text-[10px] font-bold uppercase tracking-widest text-gray-400">Date &
                                         Time</label>
-                                    <input type="datetime-local" x-model="date"
-                                        class="w-full bg-gray-50 dark:bg-darkLighter border border-gray-100 dark:border-gray-700 px-4 py-4 focus:outline-none focus:border-primary transition text-sm">
+                                    <input type="datetime-local" id="reservation-date" x-model="date"
+                                        class="w-full bg-gray-50 dark:bg-darkLighter border border-gray-100 dark:border-gray-700 px-4 py-4 focus:outline-none focus:border-primary transition text-sm"
+                                        required>
                                 </div>
                                 <div class="space-y-2">
-                                    <label class="text-[10px] font-bold uppercase tracking-widest text-gray-400">Total
+                                    <label for="reservation-guests" class="text-[10px] font-bold uppercase tracking-widest text-gray-400">Total
                                         Guests</label>
-                                    <select x-model="guests"
+                                    <select id="reservation-guests" x-model="guests"
                                         class="w-full bg-gray-50 dark:bg-darkLighter border border-gray-100 dark:border-gray-700 px-4 py-4 focus:outline-none focus:border-primary transition text-sm">
                                         <option>1 Person</option>
                                         <option>2 Persons</option>
@@ -650,9 +682,15 @@
                     'images/drink.png', 'images/two-guns-espresso.avif'
                 ]" :key="img">
                     <div @click="activeImg = img; open = true"
-                        class="aspect-[4/5] overflow-hidden group relative border border-white/5 cursor-pointer">
+                        class="aspect-[4/5] overflow-hidden group relative border border-white/5 cursor-pointer"
+                        role="button"
+                        tabindex="0"
+                        @keydown.enter="activeImg = img; open = true"
+                        :aria-label="'View gallery image: ' + img">
                         <img :src="img"
-                            class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                            :alt="'Haven Cafe gallery - ' + img.split('/').pop()"
+                            class="w-full h-full object-cover transition duration-700 group-hover:scale-110"
+                            loading="lazy">
                         <div
                             class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
                             <i class="fa-solid fa-magnifying-glass-plus text-white text-xl"></i>
@@ -669,15 +707,19 @@
             style="display: none;">
 
             <button @click="open = false"
-                class="absolute top-6 right-6 text-white text-4xl hover:text-primary transition z-[110]">
-                <i class="fa-solid fa-xmark"></i>
+                class="absolute top-6 right-6 text-white text-4xl hover:text-primary transition z-[110]"
+                aria-label="Close gallery lightbox"
+                type="button">
+                <i class="fa-solid fa-xmark" aria-hidden="true"></i>
             </button>
 
             <div class="relative max-w-5xl max-h-full w-full h-full flex items-center justify-center"
-                @click.away="open = false">
+                @click.away="open = false"
+                @keydown.escape="open = false">
                 <img :src="activeImg" x-transition:enter="transition ease-out duration-500 delay-100"
                     x-transition:enter-start="scale-90 opacity-0" x-transition:enter-end="scale-100 opacity-100"
-                    class="max-w-full max-h-full object-contain shadow-2xl">
+                    class="max-w-full max-h-full object-contain shadow-2xl"
+                    :alt="'Full size image: ' + activeImg">
             </div>
         </div>
     </section>
@@ -748,11 +790,9 @@
             </div>
         </div>
     </section>
+    </main>
 
-
-
-
-    <footer id="contact" class="bg-dark text-white pt-24 pb-32 md:pb-12 border-t border-gray-800">
+    <footer id="contact" class="bg-dark text-white pt-24 pb-32 md:pb-12 border-t border-gray-800" role="contentinfo">
         <div class="container mx-auto px-6">
             <div class="grid md:grid-cols-2 gap-20 mb-20">
                 <div>
@@ -762,33 +802,35 @@
                         Papua.</p>
                     <p class="text-gray-400 text-lg mb-10">WhatsApp: +62 823 1100 5950</p>
 
-                    <div class="flex flex-wrap gap-3">
-                        <a href="#"
+                    <nav class="flex flex-wrap gap-3" aria-label="Social media links">
+                        <a href="#" aria-label="RSS Feed"
                             class="w-12 h-12 border border-gray-700 flex items-center justify-center hover:bg-primary transition text-xl"><i
-                                class="fa-solid fa-rss"></i></a>
-                        <a href="https://www.instagram.com/qwerty.cake20/"
+                                class="fa-solid fa-rss" aria-hidden="true"></i></a>
+                        <a href="https://www.instagram.com/qwerty.cake20/" aria-label="Follow us on Instagram" target="_blank" rel="noopener noreferrer"
                             class="w-12 h-12 border border-gray-700 flex items-center justify-center hover:bg-primary transition text-xl"><i
-                                class="fa-brands fa-instagram"></i></a>
-                        <a href="#"
+                                class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+                        <a href="#" aria-label="Follow us on Facebook"
                             class="w-12 h-12 border border-gray-700 flex items-center justify-center hover:bg-primary transition text-xl"><i
-                                class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#"
+                                class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+                        <a href="#" aria-label="Follow us on TikTok"
                             class="w-12 h-12 border border-gray-700 flex items-center justify-center hover:bg-primary transition text-xl"><i
-                                class="fa-brands fa-tiktok"></i></a>
-                        <a href="#"
+                                class="fa-brands fa-tiktok" aria-hidden="true"></i></a>
+                        <a href="#" aria-label="Subscribe on YouTube"
                             class="w-12 h-12 border border-gray-700 flex items-center justify-center hover:bg-primary transition text-xl"><i
-                                class="fa-brands fa-youtube"></i></a>
-                        <a href="#"
+                                class="fa-brands fa-youtube" aria-hidden="true"></i></a>
+                        <a href="#" aria-label="Visit our website"
                             class="w-12 h-12 border border-gray-700 flex items-center justify-center hover:bg-primary transition text-xl"><i
-                                class="fa-solid fa-link"></i></a>
-                    </div>
+                                class="fa-solid fa-link" aria-hidden="true"></i></a>
+                    </nav>
                 </div>
 
                 <div
                     class="bg-gray-800 border-8 border-darkLighter h-80 grayscale hover:grayscale-0 transition duration-500">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3985.877022068411!2d140.4851!3d-2.5833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMsKwMzUnMDAuMCJTIDE0MMKwMjknMDYuNCJF!5e0!3m2!1sen!2sid!4v1700000000000"
-                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                        title="Haven Cafe location on Google Maps"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
 
@@ -803,33 +845,36 @@
         </div>
     </footer>
 
-    <div
-        class="fixed bottom-0 left-0 right-0 bg-white dark:bg-dark border-t border-gray-200 dark:border-gray-800 md:hidden z-50 grid grid-cols-5 h-20">
-        <a href="#home" @click="currentSection = 'home'"
+    <!-- Mobile Navigation -->
+    <nav class="fixed bottom-0 left-0 right-0 bg-white dark:bg-dark border-t border-gray-200 dark:border-gray-800 md:hidden z-50 grid grid-cols-5 h-20"
+        role="navigation" aria-label="Mobile navigation">
+        <a href="#home" @click="currentSection = 'home'" aria-label="Home"
             class="flex items-center justify-center border-r border-gray-100 dark:border-gray-800"
             :class="currentSection === 'home' ? 'text-primary bg-gray-50 dark:bg-darkLighter' : 'text-gray-400'">
-            <i class="fa-solid fa-house"></i>
+            <i class="fa-solid fa-house" aria-hidden="true"></i>
         </a>
-        <a href="#menu" @click="currentSection = 'menu'"
+        <a href="#menu" @click="currentSection = 'menu'" aria-label="Menu"
             class="flex items-center justify-center border-r border-gray-100 dark:border-gray-800"
             :class="currentSection === 'menu' ? 'text-primary bg-gray-50 dark:bg-darkLighter' : 'text-gray-400'">
-            <i class="fa-solid fa-mug-saucer"></i>
+            <i class="fa-solid fa-mug-saucer" aria-hidden="true"></i>
         </a>
         <button @click="darkMode = !darkMode; localStorage.setItem('theme', darkMode ? 'dark' : 'light')"
-            class="bg-primary text-white flex items-center justify-center">
-            <i class="fa-solid" :class="darkMode ? 'fa-sun' : 'fa-moon'"></i>
+            class="bg-primary text-white flex items-center justify-center"
+            :aria-label="darkMode ? 'Switch to light mode' : 'Switch to dark mode'"
+            type="button">
+            <i class="fa-solid" :class="darkMode ? 'fa-sun' : 'fa-moon'" aria-hidden="true"></i>
         </button>
-        <a href="#reservation" @click="currentSection = 'reservation'"
+        <a href="#reservation" @click="currentSection = 'reservation'" aria-label="Reservation"
             class="flex items-center justify-center border-l border-gray-100 dark:border-gray-800"
             :class="currentSection === 'reservation' ? 'text-primary bg-gray-50 dark:bg-darkLighter' : 'text-gray-400'">
-            <i class="fa-solid fa-seedling"></i>
+            <i class="fa-solid fa-seedling" aria-hidden="true"></i>
         </a>
-        <a href="#contact" @click="currentSection = 'contact'"
+        <a href="#contact" @click="currentSection = 'contact'" aria-label="Contact"
             class="flex items-center justify-center border-l border-gray-100 dark:border-gray-800"
             :class="currentSection === 'contact' ? 'text-primary bg-gray-50 dark:bg-darkLighter' : 'text-gray-400'">
-            <i class="fa-solid fa-map-pin"></i>
+            <i class="fa-solid fa-map-pin" aria-hidden="true"></i>
         </a>
-    </div>
+    </nav>
 
 </body>
 
