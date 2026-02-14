@@ -576,7 +576,7 @@
 
                 <div class="space-y-8">
                     <div>
-                        <h4 class="text-primary font-bold uppercase text-xs tracking-[0.3em] mb-3">Book A Table</h4>
+                        <h4 class="text-primary font-bold uppercase text-xs tracking-[0.3em] mb-3">Make a reservation</h4>
                         <h2 class="text-5xl md:text-6xl font-black uppercase tracking-tighter leading-none">
                             Secure Your <br><span class="text-primary italic">Haven Experience.</span>
                         </h2>
@@ -590,25 +590,26 @@
                     <div class="space-y-4">
                         <div class="flex items-start gap-4">
                             <div
-                                class="w-12 h-12 bg-gray-50 dark:bg-dark border border-gray-100 dark:border-gray-700 flex items-center justify-center text-primary text-xl">
+                                class="w-20 h-20 bg-gray-50 dark:bg-dark border border-gray-100 dark:border-gray-700 flex items-center justify-center text-primary text-6xl">
                                 <i class="fa-solid fa-clock"></i>
                             </div>
-                            <div>
-                                <h5 class="font-bold uppercase text-sm">Opening Hours</h5>
-                                <p class="text-gray-500 text-sm">Mon - Sat: 09:00 AM - 10:00 PM</p>
-                                <p class="text-gray-500 text-sm">Sun: 12:00 PM - 11:00 PM</p>
+                            <div class="space-y-5">
+                                <h5 class="font-bold uppercase text-lg">Opening Hours</h5>
+                                <p class="text-gray-500 text-lg font-bold">Sunday - Monday: 11:00 AM - 10:00 PM</p>
+                                <p class="text-gray-500 text-lg">Tuesday: <span class="text-red-600">Closed</span></p>
                             </div>
                         </div>
                     </div>
                 </div>
 
+                <!-- 6281248584145 -->
                 <div class="relative" x-data="{ 
                     name: '', 
                     date: '', 
                     guests: '2 Persons',
                     sendWa() {
                         const message = `Hi Haven Cafe, I would like to make a reservation:%0A%0A- Name: ${this.name}%0A- Date/Time: ${this.date}%0A- Guests: ${this.guests}`;
-                        window.open(`https://wa.me/6282311005950?text=${message}`, '_blank');
+                        window.open(`https://wa.me/6281248584145?text=${message}`, '_blank');
                     }
                 }">
                     <div class="absolute -top-10 -right-10 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
@@ -647,7 +648,7 @@
 
                             <button @click="sendWa()"
                                 class="w-full bg-primary text-white py-5 font-black uppercase text-xs tracking-[0.2em] hover:bg-black transition duration-500 mt-4 flex items-center justify-center gap-3">
-                                Confirm Reservation
+                                Send the Reservation
                                 <i class="fa-solid fa-arrow-right"></i>
                             </button>
                         </div>
@@ -784,11 +785,11 @@
                         <div class="flex flex-col">
                             <span
                                 class="text-xs font-black uppercase tracking-widest leading-none dark:text-gray-200">Excellent</span>
-                            <span class="text-sm font-bold text-gray-500">4.8 / 5.0 Rating</span>
+                            <span class="text-sm font-bold text-gray-500">4.6 / 5.0 Rating</span>
                         </div>
                     </div>
 
-                    <a href="https://www.google.com/maps" target="_blank"
+                    <a href="https://share.google/jMihOCbiRSPzeLPXf" target="_blank"
                         class="bg-primary hover:bg-black text-white px-6 py-4 text-xs font-black uppercase tracking-[0.2em] transition-all duration-300 shadow-lg flex items-center gap-2">
                         Write A Review <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
                     </a>
@@ -835,12 +836,12 @@
                     </h4>
                     <p class="text-gray-400 text-lg mb-4">Ex-Bosco Fernandez, Jl. Gereja Silo, Hinekombe, Sentani,
                         Papua.</p>
-                    <p class="text-gray-400 text-lg mb-10">WhatsApp: +62 823 1100 5950</p>
+                    <p class="text-gray-400 text-lg mb-10">WhatsApp: +62 812-4858-4145</p>
 
                     <nav class="flex flex-wrap gap-3" aria-label="Social media links">
-                        <a href="#" aria-label="RSS Feed"
+                        <!-- <a href="#" aria-label="RSS Feed"
                             class="w-12 h-12 border border-gray-700 flex items-center justify-center hover:bg-primary transition text-xl"><i
-                                class="fa-solid fa-rss" aria-hidden="true"></i></a>
+                                class="fa-solid fa-rss" aria-hidden="true"></i></a> -->
                         <a href="https://www.instagram.com/official_haven_cafe_sentani/" aria-label="Follow us on Instagram" target="_blank" rel="noopener noreferrer"
                             class="w-12 h-12 border border-gray-700 flex items-center justify-center hover:bg-primary transition text-xl"><i
                                 class="fa-brands fa-instagram" aria-hidden="true"></i></a>
