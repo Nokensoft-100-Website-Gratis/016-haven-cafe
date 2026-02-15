@@ -32,7 +32,7 @@
       "cold": {
         "available": true,
         "price": 38500,
-        "image": "images/logo.png"
+        "image": "images/menu/yakult-menu/lychee-yakult.png"
       }
     },
     "status": true
@@ -70,7 +70,7 @@
       "cold": {
         "available": true,
         "price": 38500,
-        "image": "images/logo.png"
+        "image": "images/menu/yakult-menu/lemon-yakult.png"
       }
     },
     "status": true
@@ -89,7 +89,7 @@
       "cold": {
         "available": true,
         "price": 38500,
-        "image": "images/logo.png"
+        "image": "images/menu/yakult-menu/mango-yakult.png"
       }
     },
     "status": true

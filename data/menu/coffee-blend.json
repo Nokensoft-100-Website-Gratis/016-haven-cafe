@@ -28,7 +28,7 @@
     "default_selection": "cold",
     "options": {
       "hot": { "available": false, "price": 0, "image": null },
-      "cold": { "available": true, "price": 47300, "image": "images/menu/coffee-blend/caramel-blend.jpg" }
+      "cold": { "available": true, "price": 47300, "image": "images/menu/coffee-blend/salted-caramel-latte.png" }
     },
     "status": true
   },

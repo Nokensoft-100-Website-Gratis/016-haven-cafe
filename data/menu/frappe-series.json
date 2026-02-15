@@ -39,7 +39,7 @@
     "default_selection": "cold",
     "options": {
       "hot": { "available": false, "price": 0, "image": null },
-      "cold": { "available": true, "price": 33000, "image": "images/logo.png" }
+      "cold": { "available": true, "price": 33000, "image": "images/menu/frappe-series/vanilla-oreo-frappe.png" }
     },
     "status": true
   },

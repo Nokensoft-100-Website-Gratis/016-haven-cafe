@@ -50,7 +50,7 @@
     "default_selection": "cold",
     "options": {
       "hot": { "available": false, "price": 0, "image": null },
-      "cold": { "available": true, "price": 55000, "image": "images/logo.png" }
+      "cold": { "available": true, "price": 55000, "image": "images/menu/tea-menu/jumbo-markisa-mango.png" }
     },
     "status": true
   },

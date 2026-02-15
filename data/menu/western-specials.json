@@ -22,7 +22,7 @@
       "hot": {
         "available": true,
         "price": 71500,
-        "image": "images/logo.png"
+        "image": "images/menu/western-specials/meatloaf.png"
       }
     },
     "status": true
@@ -50,7 +50,7 @@
       "hot": {
         "available": true,
         "price": 71500,
-        "image": "images/logo.png"
+        "image": "images/menu/western-specials/spaghetti-bolognaise.png"
       }
     },
     "status": true

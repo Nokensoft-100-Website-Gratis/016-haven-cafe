@@ -6,7 +6,7 @@
     "default_selection": "cold",
     "options": {
       "hot": { "available": false, "price": 0, "image": null },
-      "cold": { "available": true, "price": 38500, "image": "images/logo.png" }
+      "cold": { "available": true, "price": 38500, "image": "images/menu/jus-milk/jus-alpukat.png" }
     },
     "status": true
   },

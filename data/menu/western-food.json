@@ -5,7 +5,7 @@
     "description": "Burger sapi ukuran besar.",
     "default_selection": "hot",
     "options": {
-      "hot": { "available": true, "price": 71500, "image": "images/logo.png" }
+      "hot": { "available": true, "price": 71500, "image": "images/menu/western-food/giant-beef-burger.png" }
     },
     "status": true
   },
@@ -15,7 +15,7 @@
     "description": "Burger sapi ukuran besar disajikan dengan kentang goreng.",
     "default_selection": "hot",
     "options": {
-      "hot": { "available": true, "price": 88000, "image": "images/logo.png" }
+      "hot": { "available": true, "price": 88000, "image": "images/menu/western-food/giant-beef-burger-with-fries.png" }
     },
     "status": true
   },

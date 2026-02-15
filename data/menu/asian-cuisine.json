@@ -103,7 +103,7 @@
       "hot": {
         "available": true,
         "price": 55000,
-        "image": "images/menu/asian-cuisine/nasi-goreng.jpg"
+        "image": "images/menu/asian-cuisine/nasi-goreng-hekeng.png"
       },
       "cold": {
         "available": false,
@@ -141,7 +141,7 @@
       "hot": {
         "available": true,
         "price": 22000,
-        "image": "images/menu/asian-cuisine/nasi-goreng.jpg"
+        "image": "images/menu/asian-cuisine/supermie-rebus-telur.png"
       },
       "cold": {
         "available": false,

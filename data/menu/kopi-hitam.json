@@ -84,7 +84,7 @@
       "hot": {
         "available": true,
         "price": 38500,
-        "image": "images/menu/kopi-hitam/manual-brew.jpg"
+        "image": "images/menu/kopi-hitam/v-60.png"
       },
       "cold": {
         "available": false,
@@ -122,7 +122,7 @@
       "hot": {
         "available": true,
         "price": 38500,
-        "image": "images/menu/kopi-hitam/vietnam-drip-hot.jpg"
+        "image": "images/menu/kopi-hitam/vietnam-drip.png"
       },
       "cold": {
         "available": true,
