@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="id" class="scroll-smooth" x-data="{ 
+<html lang="en" class="scroll-smooth"
+    x-data="{
     darkMode: localStorage.getItem('theme') === 'dark',
     activeTab: 'popular',
     currentSection: 'home'
@@ -25,7 +26,7 @@
     <meta property="og:title" content="Haven Cafe | Coffee & Roastery Sentani Papua">
     <meta property="og:description" content="Experience the finest Papua highland coffee in the heart of Sentani. Authentic flavors blended with a modern atmosphere.">
     <meta property="og:image" content="https://havencafesentani.com/images/logo.png">
-    <meta property="og:locale" content="id_ID">
+    <meta property="og:locale" content="en_US">
     <meta property="og:site_name" content="Haven Cafe">
     
     <!-- Twitter -->
@@ -141,6 +142,9 @@
                         @click="currentSection = 'home'" class="hover:text-primary transition py-1" role="menuitem">Home</a>
                     <a href="#menu" :class="currentSection === 'menu' ? 'nav-active' : ''"
                         @click="currentSection = 'menu'" class="hover:text-primary transition py-1" role="menuitem">Our Menu</a>
+                    <a href="#takeaway" :class="currentSection === 'takeaway' ? 'nav-active' : ''"
+                        @click="currentSection = 'takeaway'"
+                        class="hover:text-primary transition py-1" role="menuitem">Order Delivery</a>
                     <a href="#reservation" :class="currentSection === 'reservation' ? 'nav-active' : ''"
                         @click="currentSection = 'reservation'"
                         class="hover:text-primary transition py-1" role="menuitem">Reservation</a>
@@ -247,8 +251,10 @@
         categories: [], 
         activeCategory: '', 
         menuItems: [],
+        allMenuItems: [],
         searchQuery: '',
         loading: false,
+        loadingAll: false,
         
         formatRupiah(number) {
             return new Intl.NumberFormat('id-ID', {
@@ -258,12 +264,16 @@
             }).format(number);
         },
 
-        // Properti komputasi untuk menyaring menu berdasarkan pencarian
         get filteredItems() {
-            if (!this.searchQuery) return this.menuItems;
-            return this.menuItems.filter(item => 
-                item.menu_name.toLowerCase().includes(this.searchQuery.toLowerCase()) ||
-                item.description.toLowerCase().includes(this.searchQuery.toLowerCase())
+            return this.menuItems;
+        },
+
+        get globalSearchResults() {
+            if (!this.searchQuery) return [];
+            const query = this.searchQuery.toLowerCase();
+            return this.allMenuItems.filter(item =>
+                item.menu_name.toLowerCase().includes(query) ||
+                item.description.toLowerCase().includes(query)
             );
         },
 
@@ -272,9 +282,28 @@
                 const res = await fetch('./data/menu/categories.json');
                 this.categories = await res.json();
                 if(this.categories.length > 0) this.switchCategory(this.categories[0]);
+                this.loadAllItems();
             } catch (e) {
-                console.error('Gagal memuat daftar kategori');
+                console.error('Failed to load category list');
             }
+        },
+
+        async loadAllItems() {
+            this.loadingAll = true;
+            const results = [];
+            for (const cat of this.categories) {
+                try {
+                    const res = await fetch(`./data/menu/${cat.file}`);
+                    const data = await res.json();
+                    data.filter(item => item.status).forEach(item => {
+                        results.push({ ...item, category_label: cat.label });
+                    });
+                } catch (e) {
+                    console.error('Failed to load:', cat.file);
+                }
+            }
+            this.allMenuItems = results;
+            this.loadingAll = false;
         },
         
         async switchCategory(cat) {
@@ -286,7 +315,7 @@
             
             this.loading = true;
             this.activeCategory = cat.id;
-            this.searchQuery = ''; // Reset pencarian saat ganti kategori
+            this.searchQuery = '';
             
             try {
                 const res = await fetch(`./data/menu/${cat.file}`);
@@ -294,7 +323,7 @@
                 this.menuItems = data.filter(item => item.status);
             } catch (e) {
                 this.menuItems = [];
-                console.error('File menu tidak ditemukan:', cat.file);
+                console.error('Menu file not found:', cat.file);
             }
             this.loading = false;
         }
@@ -349,7 +378,39 @@
             </aside>
 
             <main class="w-full md:w-2/3 lg:w-3/4 min-h-[400px]">
-                <div class="space-y-4 md:space-y-0">
+
+                <!-- Global Search Results -->
+                <div x-show="searchQuery" x-transition:enter="transition ease-out duration-300">
+                    <div x-show="loadingAll" class="flex flex-col items-center justify-center py-12 text-gray-400">
+                        <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-primary mb-4"></div>
+                    </div>
+                    <div x-show="!loadingAll && globalSearchResults.length > 0"
+                         class="grid grid-cols-2 lg:grid-cols-4 gap-4 py-6 md:py-0">
+                        <template x-for="(item, index) in globalSearchResults" :key="index">
+                            <div class="group animate-fadeIn border border-gray-100 dark:border-gray-800 overflow-hidden hover:border-primary transition duration-300">
+                                <div class="aspect-square overflow-hidden bg-gray-100 dark:bg-gray-800">
+                                    <img :src="item.options[item.default_selection].image || 'images/placeholder.jpg'" 
+                                         :alt="item.menu_name"
+                                         class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+                                         loading="lazy">
+                                </div>
+                                <div class="p-3">
+                                    <span class="text-[9px] uppercase tracking-widest text-primary font-bold" x-text="item.category_label"></span>
+                                    <h3 class="font-black uppercase text-xs md:text-sm dark:text-gray-300 group-hover:text-primary leading-tight mt-0.5 mb-1" x-text="item.menu_name"></h3>
+                                    <span class="text-primary dark:text-gray-400 font-black text-sm block" 
+                                          x-text="formatRupiah(item.options[item.default_selection].price)"></span>
+                                </div>
+                            </div>
+                        </template>
+                    </div>
+                    <div x-show="!loadingAll && globalSearchResults.length === 0" class="py-12 text-center">
+                        <i class="fa-solid fa-magnifying-glass text-gray-200 text-3xl mb-3 block"></i>
+                        <p class="text-gray-400 text-[10px] uppercase tracking-widest">No menu found for "<span x-text="searchQuery"></span>"</p>
+                    </div>
+                </div>
+
+                <!-- Category Browse -->
+                <div x-show="!searchQuery" class="space-y-4 md:space-y-0">
                     <template x-for="cat in categories" :key="cat.id">
                         <div class="border-b border-gray-100 dark:border-gray-800 md:border-none">
                             <button 
@@ -366,35 +427,24 @@
                                 </div>
 
                                 <div x-show="!loading" 
-                                     class="grid grid-cols-1 lg:grid-cols-2 gap-x-10 gap-y-8 py-6 md:py-0"
+                                     class="grid grid-cols-2 lg:grid-cols-4 gap-4 py-6 md:py-0"
                                      x-transition:enter="transition ease-out duration-300">
                                     
                                     <template x-for="(item, index) in filteredItems" :key="index">
-                                        <div class="flex gap-4 items-start group animate-fadeIn">
-                                            <div class="w-20 h-20 md:w-24 md:h-24 bg-gray-100 dark:bg-gray-800 flex-shrink-0 overflow-hidden rounded-sm">
+                                        <div class="group animate-fadeIn border border-gray-100 dark:border-gray-800 overflow-hidden hover:border-primary transition duration-300">
+                                            <div class="aspect-square overflow-hidden bg-gray-100 dark:bg-gray-800">
                                                 <img :src="item.options[item.default_selection].image || 'images/placeholder.jpg'" 
-                                                     :alt="item.menu_name + ' - ' + item.description"
+                                                     :alt="item.menu_name"
                                                      class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
                                                      loading="lazy">
                                             </div>
-
-                                            <div class="flex-grow">
-                                                <div class="flex justify-between items-start mb-1">
-                                                    <div class="flex flex-col">
-                                                        <h3 class="font-black uppercase text-base md:text-lg dark:text-gray-300 group-hover:text-primary" x-text="item.menu_name"></h3>
-                                                        <p class="text-[10px] md:text-[11px] text-gray-500 dark:text-gray-400 italic" x-text="item.description"></p>
-                                                    </div>
-                                                    <span class="text-primary dark:text-gray-300 font-black text-sm md:text-base whitespace-nowrap ml-4" 
-                                                          x-text="formatRupiah(item.options[item.default_selection].price)"></span>
-                                                </div>
+                                            <div class="p-3">
+                                                <h3 class="font-black uppercase text-xs md:text-sm dark:text-gray-300 group-hover:text-primary leading-tight mb-1" x-text="item.menu_name"></h3>
+                                                <span class="text-primary dark:text-gray-400 font-black text-sm block" 
+                                                      x-text="formatRupiah(item.options[item.default_selection].price)"></span>
                                             </div>
                                         </div>
                                     </template>
-                                </div>
-
-                                <div x-show="!loading && filteredItems.length === 0" class="py-12 text-center">
-                                    <i class="fa-solid fa-magnifying-glass text-gray-200 text-3xl mb-3 block"></i>
-                                    <p class="text-gray-400 text-[10px] uppercase tracking-widest">No menu found for "<span x-text="searchQuery"></span>"</p>
                                 </div>
                             </div>
                         </div>
@@ -406,26 +456,74 @@
 </section>
 
 
+<!-- Take Away & Delivery Section -->
+<section id="takeaway" class="py-24 bg-gray-50 dark:bg-darkLighter">
+    <div class="container mx-auto px-6">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-14">
+                <h4 class="text-primary dark:text-gray-400 font-bold uppercase text-xs tracking-[0.3em] mb-2">Take Away & Delivery</h4>
+                <h2 class="text-5xl font-black uppercase tracking-tighter dark:text-white">Order <span class="text-primary italic">Delivery.</span></h2>
+                <div class="h-1.5 w-24 bg-primary mt-3 mx-auto"></div>
+                <p class="text-gray-500 dark:text-gray-400 mt-6 text-lg max-w-xl mx-auto">
+                    Enjoy your favorite Haven Cafe menu delivered straight to your door. Order via WhatsApp, we'll deliver!
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-14">
+                <!-- Delivery Hours -->
+                <div class="bg-white dark:bg-dark border border-gray-200 dark:border-gray-800 p-6 text-center group hover:border-primary transition-all duration-500">
+                    <i class="fa-solid fa-clock text-primary text-2xl mb-4 block"></i>
+                    <h5 class="font-black uppercase text-xs tracking-widest mb-2 dark:text-white">Delivery Hours</h5>
+                    <p class="text-gray-500 dark:text-gray-400 text-sm font-semibold">11:00 AM – 9:00 PM</p>
+                </div>
+
+                <!-- Delivery Area -->
+                <div class="bg-white dark:bg-dark border border-gray-200 dark:border-gray-800 p-6 text-center group hover:border-primary transition-all duration-500">
+                    <i class="fa-solid fa-location-dot text-primary text-2xl mb-4 block"></i>
+                    <h5 class="font-black uppercase text-xs tracking-widest mb-2 dark:text-white">Delivery Area</h5>
+                    <p class="text-gray-500 dark:text-gray-400 text-sm font-semibold">Doyo – Hawai</p>
+                </div>
+
+                <!-- Delivery Fee Sentani -->
+                <div class="bg-white dark:bg-dark border border-gray-200 dark:border-gray-800 p-6 text-center group hover:border-primary transition-all duration-500">
+                    <i class="fa-solid fa-motorcycle text-primary text-2xl mb-4 block"></i>
+                    <h5 class="font-black uppercase text-xs tracking-widest mb-2 dark:text-white">Sentani Delivery</h5>
+                    <p class="text-primary dark:text-gray-300 text-xl font-black">Rp 5.000</p>
+                </div>
+
+                <!-- Delivery Fee Doyo & Hawai -->
+                <div class="bg-white dark:bg-dark border border-gray-200 dark:border-gray-800 p-6 text-center group hover:border-primary transition-all duration-500">
+                    <i class="fa-solid fa-truck text-primary text-2xl mb-4 block"></i>
+                    <h5 class="font-black uppercase text-xs tracking-widest mb-2 dark:text-white">Doyo & Hawai Delivery</h5>
+                    <p class="text-primary dark:text-gray-300 text-xl font-black">Rp 10.000</p>
+                </div>
+            </div>
+
+            <!-- Free Delivery Banner -->
+            <div class="bg-primary/10 dark:bg-primary/20 border border-primary/30 p-6 text-center mb-14">
+                <i class="fa-solid fa-gift text-primary text-xl mb-2 block"></i>
+                <p class="text-primary dark:text-green-400 font-black uppercase text-sm tracking-widest">
+                    Free Delivery for orders above Rp 150,000!
+                </p>
+            </div>
+
+            <!-- WhatsApp CTA -->
+            <div class="text-center">
+                <a href="https://wa.me/6281248584145?text=Hi Haven Cafe, I'd like to place a Take Away / Delivery order."
+                    target="_blank"
+                    class="inline-flex items-center gap-4 bg-dark dark:bg-primary text-white px-12 py-5 font-black uppercase text-xs tracking-[0.2em] hover:bg-primary dark:hover:bg-white dark:hover:text-dark transition duration-500">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    Order Now via WhatsApp
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <p class="text-gray-400 text-[11px] uppercase tracking-widest mt-4">Contact: 0812-4858-4145</p>
+            </div>
+        </div>
+    </div>
+</section>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <section id="events" class="py-24 bg-gray-50 dark:bg-dark">
+    <section id="events"
         <div class="container mx-auto px-6">
             <div class="max-w-3xl mb-16">
                 <h4 class="text-primary font-bold uppercase text-xs tracking-[0.3em] mb-3">Garden Venue</h4>
@@ -865,7 +963,7 @@
     </footer>
 
     <!-- Mobile Navigation -->
-    <nav class="fixed bottom-0 left-0 right-0 bg-white dark:bg-dark border-t border-gray-200 dark:border-gray-800 md:hidden z-50 grid grid-cols-5 h-20"
+    <nav class="fixed bottom-0 left-0 right-0 bg-white dark:bg-dark border-t border-gray-200 dark:border-gray-800 md:hidden z-50 grid grid-cols-6 h-20"
         role="navigation" aria-label="Mobile navigation">
         <a href="#home" @click="currentSection = 'home'" aria-label="Home"
             class="flex items-center justify-center border-r border-gray-100 dark:border-gray-800"
@@ -877,7 +975,12 @@
             :class="currentSection === 'menu' ? 'text-primary bg-gray-50 dark:bg-darkLighter' : 'text-gray-400'">
             <i class="fa-solid fa-mug-saucer" aria-hidden="true"></i>
         </a>
-        <button @click="darkMode = !darkMode; localStorage.setItem('theme', darkMode ? 'dark' : 'light')"
+        <a href="#takeaway" @click="currentSection = 'takeaway'" aria-label="Order Delivery"
+            class="flex items-center justify-center border-r border-gray-100 dark:border-gray-800"
+            :class="currentSection === 'takeaway' ? 'text-primary bg-gray-50 dark:bg-darkLighter' : 'text-gray-400'">
+            <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>
+        </a>
+        <button @click="darkMode = !darkMode;
             class="bg-primary text-white flex items-center justify-center"
             :aria-label="darkMode ? 'Switch to light mode' : 'Switch to dark mode'"
             type="button">

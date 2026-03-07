@@ -360,7 +360,7 @@ document.addEventListener('keydown', (e) => {
 
 // Track active section on scroll
 const observeSection = debounce(() => {
-    const sections = ['home', 'menu', 'events', 'reservation', 'gallery', 'reviews', 'contact'];
+    const sections = ['home', 'menu', 'takeaway', 'events', 'reservation', 'gallery', 'reviews', 'contact'];
     for (const sectionId of sections) {
         const section = document.getElementById(sectionId);
         if (section && isInViewport(section)) {
