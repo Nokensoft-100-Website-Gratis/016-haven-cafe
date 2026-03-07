@@ -50,7 +50,7 @@
     "default_selection": "cold",
     "options": {
       "hot": { "available": false, "price": 0, "image": null },
-      "cold": { "available": true, "price": 33000, "image": "images/logo.png" }
+      "cold": { "available": true, "price": 33000, "image": "images/menu/jus-natural/jus-mangga.png" }
     },
     "status": true
   },
@@ -94,7 +94,7 @@
     "default_selection": "cold",
     "options": {
       "hot": { "available": false, "price": 0, "image": null },
-      "cold": { "available": true, "price": 27500, "image": "images/logo.png" }
+      "cold": { "available": true, "price": 27500, "image": "images/menu/jus-natural/jus-sirsak.png" }
     },
     "status": true
   },

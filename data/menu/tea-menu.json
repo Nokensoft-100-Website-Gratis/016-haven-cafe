@@ -115,7 +115,7 @@
     "description": "Teh dengan ekstrak jahe yang hangat dan menenangkan.",
     "default_selection": "hot",
     "options": {
-      "hot": { "available": true, "price": 30800, "image": "images/logo.png" },
+      "hot": { "available": true, "price": 30800, "image": "images/menu/tea-menu/teh-jahe.png" },
       "cold": { "available": true, "price": 34100, "image": "images/logo.png" }
     },
     "status": true
@@ -126,7 +126,7 @@
     "description": "Teh herbal dengan paduan jahe dan serai.",
     "default_selection": "hot",
     "options": {
-      "hot": { "available": true, "price": 30800, "image": "images/logo.png" },
+      "hot": { "available": true, "price": 30800, "image": "images/menu/tea-menu/teh-sere-jahe.png" },
       "cold": { "available": true, "price": 34100, "image": "images/logo.png" }
     },
     "status": true
