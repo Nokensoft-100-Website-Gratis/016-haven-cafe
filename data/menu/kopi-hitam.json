@@ -70,7 +70,7 @@
       "cold": {
         "available": true,
         "price": 38500,
-        "image": "images/menu/kopi-hitam/wine-coffee-cold.jpg"
+        "image": "images/menu/kopi-hitam/wine-coffee.png"
       }
     },
     "status": true
@@ -108,7 +108,7 @@
       "cold": {
         "available": true,
         "price": 38500,
-        "image": "images/menu/kopi-hitam/japanese-iced.jpg"
+        "image": "images/menu/kopi-hitam/japanese.png"
       }
     },
     "status": true

@@ -8,12 +8,12 @@
       "hot": {
         "available": true,
         "price": 49500,
-        "image": "images/logo.png"
+        "image": "images/menu/chocolate-series/chocolate.png"
       },
       "cold": {
         "available": true,
         "price": 52800,
-        "image": "images/logo.png"
+        "image": "images/menu/chocolate-series/chocolate.png"
       }
     },
     "status": true
@@ -27,12 +27,12 @@
       "hot": {
         "available": true,
         "price": 49500,
-        "image": "images/logo.png"
+        "image": "images/menu/chocolate-series/choco-hazelnut.png"
       },
       "cold": {
         "available": true,
         "price": 52800,
-        "image": "images/logo.png"
+        "image": "images/menu/chocolate-series/choco-hazelnut.png"
       }
     },
     "status": true
@@ -46,12 +46,12 @@
       "hot": {
         "available": true,
         "price": 49500,
-        "image": "images/logo.png"
+        "image": "images/menu/chocolate-series/choco-almond.png"
       },
       "cold": {
         "available": true,
         "price": 52800,
-        "image": "images/logo.png"
+        "image": "images/menu/chocolate-series/choco-almond.png"
       }
     },
     "status": true

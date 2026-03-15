@@ -6,7 +6,7 @@
     "default_selection": "cold",
     "options": {
       "hot": { "available": false, "price": 0, "image": null },
-      "cold": { "available": true, "price": 27500, "image": "images/logo.png" }
+      "cold": { "available": true, "price": 27500, "image": "images/menu/tea-menu/peach-tea.png" }
     },
     "status": true
   },
@@ -17,7 +17,7 @@
     "default_selection": "cold",
     "options": {
       "hot": { "available": false, "price": 0, "image": null },
-      "cold": { "available": true, "price": 55000, "image": "images/logo.png" }
+      "cold": { "available": true, "price": 55000, "image": "images/menu/tea-menu/lemon-tea.png" }
     },
     "status": true
   },
@@ -28,7 +28,7 @@
     "default_selection": "cold",
     "options": {
       "hot": { "available": false, "price": 0, "image": null },
-      "cold": { "available": true, "price": 55000, "image": "images/logo.png" }
+      "cold": { "available": true, "price": 55000, "image": "images/menu/tea-menu/lychee-tea.png" }
     },
     "status": true
   },
@@ -60,8 +60,8 @@
     "description": "Teh lemon ukuran reguler, tersedia pilihan panas atau dingin.",
     "default_selection": "cold",
     "options": {
-      "hot": { "available": true, "price": 30800, "image": "images/logo.png" },
-      "cold": { "available": true, "price": 34100, "image": "images/logo.png" }
+      "hot": { "available": true, "price": 30800, "image": "images/menu/tea-menu/lemon-tea.png" },
+      "cold": { "available": true, "price": 34100, "image": "images/menu/tea-menu/lemon-tea.png" }
     },
     "status": true
   },
@@ -71,8 +71,8 @@
     "description": "Teh leci ukuran reguler dengan rasa buah yang segar.",
     "default_selection": "cold",
     "options": {
-      "hot": { "available": true, "price": 38500, "image": "images/logo.png" },
-      "cold": { "available": true, "price": 38500, "image": "images/logo.png" }
+      "hot": { "available": true, "price": 38500, "image": "images/menu/tea-menu/lychee-tea.png" },
+      "cold": { "available": true, "price": 38500, "image": "images/menu/tea-menu/lychee-tea.png" }
     },
     "status": true
   },
@@ -82,8 +82,8 @@
     "description": "Teh persik ukuran reguler yang manis dan wangi.",
     "default_selection": "cold",
     "options": {
-      "hot": { "available": true, "price": 38500, "image": "images/logo.png" },
-      "cold": { "available": true, "price": 38500, "image": "images/logo.png" }
+      "hot": { "available": true, "price": 38500, "image": "images/menu/tea-menu/peach-tea.png" },
+      "cold": { "available": true, "price": 38500, "image": "images/menu/tea-menu/peach-tea.png" }
     },
     "status": true
   },

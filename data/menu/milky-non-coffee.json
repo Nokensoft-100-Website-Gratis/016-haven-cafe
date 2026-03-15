@@ -27,12 +27,12 @@
       "hot": {
         "available": true,
         "price": 49500,
-        "image": "images/logo.png"
+        "image": "images/menu/milky-non-coffee/green-tea.png"
       },
       "cold": {
         "available": true,
         "price": 52800,
-        "image": "images/logo.png"
+        "image": "images/menu/milky-non-coffee/green-tea.png"
       }
     },
     "status": true
@@ -46,12 +46,12 @@
       "hot": {
         "available": true,
         "price": 44000,
-        "image": "images/logo.png"
+        "image": "images/menu/milky-non-coffee/taro.png"
       },
       "cold": {
         "available": true,
         "price": 47300,
-        "image": "images/logo.png"
+        "image": "images/menu/milky-non-coffee/taro.png"
       }
     },
     "status": true

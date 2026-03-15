@@ -141,12 +141,12 @@
       "hot": {
         "available": true,
         "price": 44000,
-        "image": "images/logo.png"
+        "image": "images/menu/flavor/pandan-latte.png"
       },
       "cold": {
         "available": true,
         "price": 47300,
-        "image": "images/logo.png"
+        "image": "images/menu/flavor/pandan-latte.png"
       }
     },
     "status": true
