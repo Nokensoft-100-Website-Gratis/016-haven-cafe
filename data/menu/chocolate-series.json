@@ -84,12 +84,12 @@
       "hot": {
         "available": true,
         "price": 49500,
-        "image": "images/logo.png"
+        "image": "images/menu/chocolate-series/choco-mint.png"
       },
       "cold": {
         "available": true,
         "price": 52800,
-        "image": "images/logo.png"
+        "image": "images/menu/chocolate-series/choco-mint.png"
       }
     },
     "status": true

@@ -61,7 +61,7 @@
     "default_selection": "cold",
     "options": {
       "hot": { "available": false, "price": 0, "image": null },
-      "cold": { "available": true, "price": 38500, "image": "images/logo.png" }
+      "cold": { "available": true, "price": 38500, "image": "./images/menu/squash-menu/strawberry-squash.png" }
     },
     "status": true
   },
@@ -83,7 +83,7 @@
     "default_selection": "cold",
     "options": {
       "hot": { "available": false, "price": 0, "image": null },
-      "cold": { "available": true, "price": 38500, "image": "images/logo.png" }
+      "cold": { "available": true, "price": 38500, "image": "images/menu/squash-menu/green-apple-squash.png" }
     },
     "status": true
   },
@@ -94,7 +94,7 @@
     "default_selection": "cold",
     "options": {
       "hot": { "available": false, "price": 0, "image": null },
-      "cold": { "available": true, "price": 38500, "image": "images/logo.png" }
+      "cold": { "available": true, "price": 38500, "image": "./images/menu/squash-menu/strawberry-squash.png" }
     },
     "status": true
   },

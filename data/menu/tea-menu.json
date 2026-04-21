@@ -28,7 +28,7 @@
     "default_selection": "cold",
     "options": {
       "hot": { "available": false, "price": 0, "image": null },
-      "cold": { "available": true, "price": 55000, "image": "images/menu/tea-menu/lychee-tea.png" }
+      "cold": { "available": true, "price": 55000, "image": "images/menu/tea-menu/jumbo-lychee-tea.png" }
     },
     "status": true
   },
@@ -39,7 +39,7 @@
     "default_selection": "cold",
     "options": {
       "hot": { "available": false, "price": 0, "image": null },
-      "cold": { "available": true, "price": 55000, "image": "images/logo.png" }
+      "cold": { "available": true, "price": 55000, "image": "images/menu/tea-menu/jumbo-peach-tea.png" }
     },
     "status": true
   },
